@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <!-- <script src="jquery.min.js"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+        <!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script> -->
+        <!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script> -->
+        <!-- <script src="jcanvas.min.js"></script> -->
+		<style>
+		img {
+  position: absolute;
+  clip: rect(0px,50px,px,6px);
+}
+		</style>
+	</head>
+	<body>
+	<body>
+    <h3>Trace Path</h3>
+    <canvas id="canvas1" width="500" height="500" style="position:absolute;top:100px;"></canvas>
+	    <canvas id="canvas" width="500" height="500" style="position:absolute;top:100px;"></canvas>
+
+	<!-- <img id="path" src="path.png"> -->
+</body>
+
+	</body>
+	<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var canvas1 = document.getElementById("canvas1");
+var ctx1 = canvas1.getContext("2d");
+
+
+// set starting values
+var fps = 50;
+var percent = 0
+var direction = 1;
+var imageObj = new Image();
+            <!-- imageObj.onload = function () { -->
+            <!-- }; -->
+	imageObj.src = '12.png';
+	ctx.drawImage(imageObj, 90, 60);
+	
+var colorReset = "green";
+
+// start the animation
+animate();
+
+function animate() {
+
+    // set the animation position (0-100)
+    percent += direction;
+    if (percent < 0) {
+        percent = 0;
+        direction = 1;
+		colorReset = "green";
+    };
+    if (percent > 360) {
+        percent = 360;
+        direction = -1;
+		colorReset = "red";
+    };
+
+    draw(percent);
+
+    // request another frame
+    setTimeout(function () {
+        requestAnimationFrame(animate);
+    }, 1000 / fps);
+}
+
+
+// draw the current frame based on sliderValue
+function draw(sliderValue) {
+
+    // redraw path
+    <!-- ctx.clearRect(0, 0, canvas.width, canvas.height); -->
+    ctx.lineWidth = 2;
+    ctx1.lineWidth = 2;
+    // draw the tracking rectangle
+    var xy;
+
+    if (sliderValue < 10) {
+        var percent = sliderValue / 10;
+		colorReset = "green";
+        xy = getQuadraticBezierXYatPercent({
+            x: 50,
+            y: 200
+        }, {
+            x: 80,
+            y: 220
+        }, {
+            x: 100,
+            y: 200
+        }, percent);
+    } else if (sliderValue < 60) {
+        var percent = (sliderValue - 10) / 50;
+        xy = getLineXYatPercent({
+            x: 100,
+            y: 200
+        }, {
+            x: 100,
+            y: 20
+        }, percent);
+     } else if (sliderValue < 110) {
+        var percent = (sliderValue - 60) / 50;
+        xy = getQuadraticBezierXYatPercent({
+            x: 100,
+            y: 20
+        }, {
+            x: 130,
+            y: 0
+        }, {
+            x: 150,
+            y: 20
+        }, percent);
+    }	else if (sliderValue < 160) {
+        var percent = (sliderValue - 110) / 50;
+        xy = getLineXYatPercent({
+            x: 150,
+            y: 20
+        }, {
+            x: 150,
+            y: 200
+        }, percent);
+     } else if (sliderValue < 210) {
+        var percent = (sliderValue - 160) / 50;
+        xy = getQuadraticBezierXYatPercent({
+            x: 150,
+            y: 200
+        }, {
+            x: 180,
+            y: 220
+        }, {
+            x: 200,
+            y: 200
+        }, percent);
+    } else if (sliderValue < 260) {
+        var percent = (sliderValue - 210) / 50;
+        xy = getLineXYatPercent({
+            x: 200,
+            y: 200
+        }, {
+            x: 200,
+            y: 20
+        }, percent);
+     } else if (sliderValue < 310) {
+        var percent = (sliderValue - 260) / 50;
+        xy = getQuadraticBezierXYatPercent({
+            x: 200,
+            y: 20
+        }, {
+            x: 230,
+            y: 0
+        }, {
+            x: 250,
+            y: 20
+        }, percent);
+    } else if (sliderValue < 360) {
+        var percent = (sliderValue - 310) / 50;
+        xy = getLineXYatPercent({
+            x: 250,
+            y: 20
+        }, {
+            x: 250,
+            y: 200
+        }, percent);
+     } else {
+        var percent = (sliderValue - 310)/10;
+		colorReset = "red";
+        xy = getQuadraticBezierXYatPercent({
+            x: 250,
+            y: 200
+        }, {
+            x: 280,
+            y: 220
+        }, {
+            x: 300,
+            y: 200
+        }, percent);
+		
+    }
+    drawTraceDot(xy, colorReset);
+    drawDot(xy, "red");
+
+}
+
+
+// draw tracking rect at xy
+function drawRect(point, color) {
+    ctx.fillStyle = "cyan";
+    ctx.strokeStyle = "gray";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.rect(point.x - 13, point.y - 8, 25, 15);
+    ctx.fill();
+    ctx.stroke();
+}
+
+// draw tracking dot at xy
+function drawDot(point, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    <!-- ctx.arc(point.x, point.y, 2, 0, Math.PI * 2, false); -->
+	ctx.clearRect(0,0,500,500);
+	ctx.drawImage(imageObj, point.x, point.y);
+  <!-- ctx.drawImage(imageObj, 0, 100, 200,200, point.x,point.y,100,100); -->
+
+    ctx.closePath();
+    ctx.stroke();
+	    ctx.fill();
+
+}
+
+
+function drawTraceDot(point, color) {
+    ctx1.fillStyle = color;
+    ctx1.strokeStyle = color;
+    ctx1.lineWidth = 3;
+    ctx1.beginPath();
+    ctx1.arc(point.x+100, point.y+80, 2, 0, Math.PI * 2, false);
+    ctx1.closePath();
+    ctx1.fill();
+    ctx1.stroke();
+}
+
+// line: percent is 0-1
+function getLineXYatPercent(startPt, endPt, percent) {
+    var dx = endPt.x - startPt.x;
+    var dy = endPt.y - startPt.y;
+    var X = startPt.x + dx * percent;
+    var Y = startPt.y + dy * percent;
+    return ({
+        x: X,
+        y: Y
+    });
+}
+
+// quadratic bezier: percent is 0-1
+function getQuadraticBezierXYatPercent(startPt, controlPt, endPt, percent) {
+    var x = Math.pow(1 - percent, 2) * startPt.x + 2 * (1 - percent) * percent * controlPt.x + Math.pow(percent, 2) * endPt.x;
+    var y = Math.pow(1 - percent, 2) * startPt.y + 2 * (1 - percent) * percent * controlPt.y + Math.pow(percent, 2) * endPt.y;
+    return ({
+        x: x,
+        y: y
+    });
+}
+
+// cubic bezier percent is 0-1
+function getCubicBezierXYatPercent(startPt, controlPt1, controlPt2, endPt, percent) {
+    var x = CubicN(percent, startPt.x, controlPt1.x, controlPt2.x, endPt.x);
+    var y = CubicN(percent, startPt.y, controlPt1.y, controlPt2.y, endPt.y);
+    return ({
+        x: x,
+        y: y
+    });
+}
+
+// cubic helper formula at percent distance
+function CubicN(pct, a, b, c, d) {
+    var t2 = pct * pct;
+    var t3 = t2 * pct;
+    return a + (-a * 3 + pct * (3 * a - a * pct)) * pct + (3 * b + pct * (-6 * b + b * 3 * pct)) * pct + (c * 3 - c * 3 * pct) * t2 + d * t3;
+}
+
+	</script>
+</html>
+</html>
