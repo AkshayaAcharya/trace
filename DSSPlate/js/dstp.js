@@ -68,7 +68,7 @@ function checkValue()
 	document.getElementById('ra3').innerHTML=values3[4];
 	document.getElementById('re3').innerHTML=en3;
 	document.getElementById('rp3').innerHTML=p3.toFixed(2);
-	document.getElementById('avg').innerHTML="<b>Average Single Shear Strength</b> ="+avg.toFixed(2)+" N/mm<sup>2</sup>";
+	document.getElementById('avg').innerHTML="<b>Average Double Shear Strength</b> ="+avg.toFixed(2)+" N/mm<sup>2</sup>";
 }
 
 
