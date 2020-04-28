@@ -7,13 +7,17 @@
 
 <title>SOLVE - Mechanics of Machines Lab - Disc Type Flywheel</title>
 <link rel="stylesheet" href="css/MOMstyle.css" />
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script> -->
+<script src='js/jquery.min.js'></script>
+<script src='js/jquery-ui.min.js'></script>
+
 <script type="text/javascript" src= "js/MOMscript.js"></script>
+
 
 <script type="text/javascript">
 
-var simstatus=1; 
+var simstatus=1;
 var rotstatus=1;
 
 var commenttext="Some Text";
@@ -124,7 +128,7 @@ function startsim()
 	simTimeId=setInterval("time=time+0.1; varupdate(); ",'100');
 <!-- else if(stopFlag == true) -->
 	<!-- simTimeId=setInterval("time=time-0.1; varupdate(); ",'100'); -->
-	
+
 <!-- r=0.01898; -->
 <!-- m=0.2; -->
 <!-- calculateValues(); -->
@@ -146,13 +150,13 @@ function simstate()
   }
     if (imgfilename=="blueplaydull")
   {
-  	 time=0;			
+  	 time=0;
   	 clearInterval(pauseTime);
 	speedString = "Speed:2x";
     document.getElementById('playpausebutton').src="images/bluepausedull.png";
-    simTimeId=setInterval("time=time+rate; varupdate(); ",speed);    
+    simTimeId=setInterval("time=time+rate; varupdate(); ",speed);
     simstatus=0;
-  } 
+  }
 }
 
 function rotstate()
@@ -168,18 +172,18 @@ function rotstate()
   {
     document.getElementById('rotationbutton').src="images/bluecwdull.png";
     rotstatus=1;
-  } 
+  }
 }
 
 
 function varinit()
 {
-varchange();		
+varchange();
 //Variable r slider and number input types
-$('#rslider').slider("value", 12);	
+$('#rslider').slider("value", 12);
 $('#rspinner').spinner("value", 12);
 //Variable m slider and number input types
-$('#mslider').slider("value", 0.2);	
+$('#mslider').slider("value", 0.2);
 $('#mspinner').spinner("value", 0.2);
 
 }
@@ -188,7 +192,7 @@ function varchange()
 {
 //Variable r slider and number input types
 $('#rslider').slider({ max : 15, min : 10, step : 1 });		// slider initialisation : jQuery widget
-$('#rspinner').spinner({ max : 15, min : 10, step : 1 });		// number initialisation : jQuery widget			
+$('#rspinner').spinner({ max : 15, min : 10, step : 1 });		// number initialisation : jQuery widget
 // monitoring change in value and connecting slider and number
 // setting trace point coordinate arrays to empty on change of link length
 $( "#rslider" ).on( "slide", function( e, ui ) { $('#rspinner').spinner("value",ui.value); ptx=[]; pty=[]; ptxdot=[]; ptxddot=[]; ptxdddot=[]; j=20;	ptx.push(b.ycoord-50); pty.push(o.xcoord+j);});
@@ -197,7 +201,7 @@ $( "#rspinner" ).on( "change", function() {  varchange() } );
 
 //Variable m slider and number input types
 $('#mslider').slider({ max : 0.7, min : 0.2, step : 0.1 });		// slider initialisation : jQuery widget
-$('#mspinner').spinner({ max : 0.7, min : 0.2, step : 0.1 });		// number initialisation : jQuery widget			
+$('#mspinner').spinner({ max : 0.7, min : 0.2, step : 0.1 });		// number initialisation : jQuery widget
 // monitoring change in value and connecting slider and number
 // setting trace point coordinate arrays to empty on change of link length
 $( "#mslider" ).on( "slide", function( e, ui ) { $('#mspinner').spinner("value",ui.value); ptx=[]; pty=[]; ptxdot=[]; ptxddot=[]; ptxdddot=[]; j=20;	ptx.push(b.ycoord-50); pty.push(o.xcoord+j);} );
@@ -231,10 +235,10 @@ $("#err1").hide();
 <!-- $("#moiDiv2").hide(); -->
 $("#momentofinertia2").hide();
 $("#err2").hide();
-$('#rslider').slider("enable"); 
+$('#rslider').slider("enable");
 $('#rspinner').spinner("enable");
-$('#mslider').slider("enable"); 
-$('#mspinner').spinner("enable"); 
+$('#mslider').slider("enable");
+$('#mspinner').spinner("enable");
 document.getElementById("textarea0").innerHTML = "";
 document.getElementById("textarea1").innerHTML = "";
  thetaa = 0;
@@ -263,16 +267,16 @@ document.getElementById("speedText").style.color="goldenrod";
  <!-- <!-- mass = 0; --> -->
  <!-- height = 0; -->
 	o2.ycoord = 155;
-	
+
 }
 if(!simstatus)
 {
 radius =$('#rspinner').spinner('value');
 m = $('#mspinner').spinner('value');
-$('#rslider').slider("disable"); 
+$('#rslider').slider("disable");
 $('#rspinner').spinner("disable");
-$('#mslider').slider("disable"); 
-$('#mspinner').spinner("disable"); 
+$('#mslider').slider("disable");
+$('#mspinner').spinner("disable");
 if(flagShift == false && thetab < thetaa)
 {
 	omegaa = ((m*gvt)/F) * (1-(Math.exp(-((F*r*time)/(Ival+(m*Math.pow(r,2)))))));
@@ -402,7 +406,7 @@ function draw()
   canvas = document.getElementById("simscreen");
   ctx = canvas.getContext("2d");
   ctx.clearRect(0,0,550,400);  //clears the complete canvas#simscreen everytime
-  
+
   pointtrans(o,trans);
   pointtrans(a,trans);
   <!-- pointtrans(b,trans); -->
@@ -415,14 +419,14 @@ function draw()
   pointtrans(cn1,trans);
   pointtrans(cn2,trans);
   pointtrans(i,trans1);
-  
+
   ctx.strokeStyle="#000";
   ctx.rect(330,95,120,5);
   ctx.stroke();
   ctx.fillStyle="#CCCCCC";
   ctx.fill();
   ctx.closePath();
-  
+
   ctx.beginPath();
     ctx.lineWidth=5;
 
@@ -432,7 +436,7 @@ function draw()
   ctx.fillStyle="#CC7777";//sea pink//circle//left and right
   <!-- ctx.fill(); -->
   ctx.closePath();
-  
+
   ctx.beginPath();
   ctx.strokeStyle="#000";
   ctx.fillRect(c.xcoord,c.ycoord,(rcal+15),2*(radius+25));
@@ -440,20 +444,20 @@ function draw()
   ctx.fillStyle="#CC7777";//sea pink
   ctx.fill();
   ctx.closePath();
-  
+
   var k=document.getElementById("simscreen");
   var ctx=k.getContext("2d");
-  
-  
+
+
    <!-- ctx.beginPath(); -->
   <!-- ctx.fillStyle="goldenrod"; -->
   <!-- ctx.font = "14px Comic Sans MS" -->
   <!-- ctx.fillText(speedString,45,95); -->
   <!-- ctx.closePath(); -->
-//Pivot and centre 
+//Pivot and centre
   pointjoin(o,a,ctx,"#CCCC00",5);
-   
-//Pivot and centre 
+
+//Pivot and centre
   pointjoin(o,a,ctx,"#CCCC00",5);
    for(i=45;i<360;i=i+45)
   {
@@ -465,7 +469,7 @@ function draw()
   for(n=0;n<17;n++)
   if(thetaRot>(90+360*n)&&thetaRot<(270+360*n)){
   pointjoin(g,h,ctx,"#CCCC00",5);//yellow
-  }  
+  }
   pointjoin(c,d,ctx,"#000",0.5);
   pointjoin(e,f,ctx,"#000",0.5);
   pointjoin(c,e,ctx,"#000",0.5);
@@ -475,15 +479,15 @@ function draw()
   pointjoin(h1,h2,ctx,"black",2.5);
   pointjoin(o1,o2,ctx,"#000",1);
   pointdisp(o2,ctx,(m+5),"#000000","#003366",'','','');//blue
- 
+
 	drawArrow(h1,ctx,2);
 	drawArrow(h2,ctx,1);
   pointjoin(a1,a2,ctx,"#000",1.5);
-  
+
   pointdisp(o,ctx,8,"#CCCCCC","#CCCCCC",'black','','');
   <!-- pointdisp(a,ctx,8,"#000000","#003366",'','',''); -->
   	document.getElementById("speedText").innerHTML=speedString;
-	
+
 }
 function drawArrow(pts,ctx,upDown)
 {
@@ -522,13 +526,13 @@ function showTitle(ele)
 		ele.setAttribute('title', "Radius of Axle");
 	else if(ele.id=="const4")
 		ele.setAttribute('title', "Frictional Torque");
-		
+
 }
 function printcomment(commenttext,commentloc)
-{	 
+{
 	document.getElementById("textarea0").innerHTML ="<p id='c1' onmouseover='showTitle(this);'>t = <span class='colorClass'>"+tt.toFixed(3)+"s</span></p><p id='c2' onmouseover='showTitle(this);'>&omega; = <span class='colorClass'>"+omegaa.toFixed(3)+"rad/s</span></p><p id='c3' onmouseover='showTitle(this);'>n2 = <span class='colorClass'>"+n2.toFixed(3)+"revolutions</span></p>";
 	clearInterval(simTimeId);
-			
+
 }
 
 </script>
@@ -589,7 +593,7 @@ Experimental Moment of Inertia (kgm<sup>2</sup>) :
 
 <div id="controls">
 <img id="playpausebutton" onclick="simstate()" src="images/blueplaydull.png" />
-<!-- <!-- <img id="rotationbutton" onclick="rotstate()" src="images/bluecwdull.png" /> --> 
+<!-- <!-- <img id="rotationbutton" onclick="rotstate()" src="images/bluecwdull.png" /> -->
 
 </div>
 
@@ -598,4 +602,4 @@ Experimental Moment of Inertia (kgm<sup>2</sup>) :
 </div>
 
 </body>
-</html> 
+</html>
