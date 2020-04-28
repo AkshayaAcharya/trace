@@ -21,6 +21,11 @@ function setSimualtionScreen(ele) {
 						break;
 		case "sm3": document.getElementById("can").src = "DSSPlate/index.html";
 						break;
+		case "dom1": document.getElementById("can").src = "discType/index.html";
+						break;
+		case "dom2": document.getElementById("can").src = "rimType/index.html";
+						break;
+						
 	}
 }
 </script>
@@ -33,9 +38,11 @@ function setSimualtionScreen(ele) {
 				<div class="panel-heading">Modifies Simulations of SOM Lab</div>
 					<div class="panel-body">
 					<div class="btn-toolbar">
-						<button id="sm1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);">DIRECT SHEAR TEST ON MILD STEEL ROD</button><br><br>
-						<button id="sm2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);">DIRECT SHEAR TEST ON TIMBER SPECIMEN</button><br><br>
-						<button id="sm3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);">DIRECT SHEAR TEST ON MILD STEEL PLATE</button><br><br>
+						<button id="sm1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " disabled>DIRECT SHEAR TEST ON MILD STEEL ROD</button><br><br>
+						<button id="sm2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" disabled>DIRECT SHEAR TEST ON TIMBER SPECIMEN</button><br><br>
+						<button id="sm3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" disabled>DIRECT SHEAR TEST ON MILD STEEL PLATE</button><br><br>
+						<button id="dom1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >DISC TYPE FLY WHEEL</button><br><br>
+						<button id="dom2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >RIM TYPE FLY WHEEL</button><br><br>
 						
 					</div>
 					</div>
