@@ -219,8 +219,8 @@ input[type=text]:focus{
 
   .formulaTooltip:hover .formulaTooltipText {
     visibility: visible;
-  } visible;
   }
+  
 /* -------------------------------------- water ---------------------------------------- */
 /* Chrome, Safari, Opera */
 @-webkit-keyframes water-4 {
