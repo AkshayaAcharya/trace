@@ -1,72 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 <meta charset="UTF-8">
-<title>DOM Simulation</title>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/> -->
-<link rel="stylesheet" href="css/bootstrap.min.css" />
 <style>
-#can {
- border: 1px solid black;
+div.panel {
+    display: none;
+	border: none;
+}
+
+div.panel.show {
+    display: block !important;
+}
+.btn: active{
+	color: darkgrey;
 }
 </style>
-<script>
-function setSimualtionScreen(ele) {
-	document.getElementById("simHead").innerHTML = ele.innerHTML;
-	console.log(ele);
-	switch(ele.id) {
-		case "1": document.getElementById("can").src = "./proell/index.html";
-						break;
-		case "2": document.getElementById("can").src = "./porter/index.html";
-						break;
-		case "3": document.getElementById("can").src = "./hartnell/index.html";
-						break;
-		case "4": document.getElementById("can").src = "./slider/index.html";
-						break;
-		case "5": document.getElementById("can").src = "./fourbar/index.html";
-						break;
-		case "6": document.getElementById("can").src = "./single/index.html";
-						break;
-		case "7": document.getElementById("can").src = "./multiple/index.html";
-						break;
-		case "8": document.getElementById("can").src = "./disc/index.html";
-						break;
-		case "9": document.getElementById("can").src = "./rim/index.html";
-						break;
+</head>
 
-	}
+<body>
+<section class="content">           
+            <!--Simulation content goes here -->
+			<!-- <iframe noscroll="" scrolling="no" src="images/slump test/index.html" height="606px" width="806px" style="background-color:white;"></iframe> -->
+<div class="accordion"><input class="btn" type="button" value="PELTON TURBINE - CONSTANT HEAD " style="text-align:left; padding: 8px; border: 3px ridge lightgrey;cursor: pointer;font-size: 14px;border-radius: 5px;" /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="pelton_head/index.html" class="panel" style="height:606px; width:804px; background-color:white;border:none"></iframe>
+</div></br>
+<div class="accordion"><input class="btn"  type="button" value="PELTON TURBINE - CONSTANT SPEED" style="text-align:left; padding: 8px; border: 3px ridge lightgrey;cursor: pointer;font-size: 14px;border-radius: 5px;" /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="pelton_speed/index.html" class="panel" style="height:606px; width:804px; background-color:white;border:none"></iframe>
+</div>
+</section>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var panel = document.getElementsByClassName('panel');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+    	var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'show', 'remove');
+        
+       	if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+}
+
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
 }
 </script>
-</head>
-<body>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">Simulations of DOM Lab</div>
-					<div class="panel-body">
-					<div class="btn-toolbar">
-						<button id="1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Proell Governor</button><br><br>
-						<button id="2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Porter Governor</button><br><br>
-						<button id="3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Hartnell Governor</button><br><br>
-						<button id="4" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Dynamic Analysis of Slider Crank Mechanism</button><br><br>
-						<button id="5" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Dynamic Analysis of Four Bar Mechanism </button><br><br>
-						<button id="6" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Balancing of Multiple Mass in Single Plane </button><br><br>
-						<button id="7" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Balancing of Multiple Mass in Multiple Plane </button><br><br>
-						<button id="8" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Disc-Type Flywheel</button><br><br>
-						<button id="9" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Rim-Type Flywheel </button><br><br>
-
-					</div>
-					</div>
-				</div>
-			</div>
-		<div class="col-xs-8">
-			<h4 id="simHead">SIMULATION SCREEN</h4>
-			<iframe id="can"  width="1000" height = "800" src="" style="border:none"></iframe>
-		</div>
-	</div>
-</div>
-
 </body>
-
 </html>
