@@ -465,7 +465,7 @@ function selectPos(elem)
 	} else if(imgId == "cb2") {
 		document.getElementById("imgTitle").innerHTML = "Maximum Position";
 		document.getElementById("myImg").src = "./images/maxPosition.png";
-		document.getElementById("myImg").style.height= exptSelected == 0 ?"300px" : "255px";
+		document.getElementById("myImg").style.height= exptSelected == 0 ?"350px" : "255px";
 		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "355px";
 		document.getElementById("imgTitle").style.left= exptSelected == 0 ?"340px" : "100px";
 	}
@@ -514,6 +514,7 @@ function startExperiments() {
 			document.getElementById("posControls").style.visibility = "visible";
 			document.getElementById("imgTitle").style.visibility = "visible";
 			document.getElementById("imgTitle").style.left = "100px";
+			document.getElementById("imgTitle").innerHTML = "Minimum Position";
 			document.getElementById("myImg").style.visibility = "visible";
 			document.getElementById("myImg").style.height= "255px";
 			document.getElementById("myImg").style.width= "355px";
@@ -621,6 +622,7 @@ function startExperiments() {
 		document.getElementById("simscreen").style.visibility = "hidden";
 		document.getElementById("variables").style.visibility = "hidden";
 		document.getElementById("imgTitle").style.visibility = "hidden";
+		document.getElementById("imgTitle").innerHTML = "Minimum Position";
 		document.getElementById("myImg").style.visibility = "hidden";
 		document.getElementById("fb").style.visibility = "hidden";
 		document.getElementById("posControls").style.visibility = "hidden";
@@ -652,6 +654,7 @@ function startExperiments() {
 		document.getElementById("posControls").style.visibility = "visible";
 		document.getElementById("imgTitle").style.visibility = "visible";
 		document.getElementById("imgTitle").style.left = "340px";
+		document.getElementById("imgTitle").innerHTML = "Minimum Position";
 		document.getElementById("myImg").style.visibility = "visible";
 		document.getElementById("myImg").style.height= "350px";
 		document.getElementById("myImg").style.width= "350px";
