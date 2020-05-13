@@ -456,15 +456,18 @@ function selectPos(elem)
 	var imgId = elem.id;
 	
 	if(imgId == "cb1") {
+		document.getElementById("imgTitle").innerHTML = "Minimum Position";
 		document.getElementById("myImg").src = "./images/minPosition.png";
 		document.getElementById("myImg").style.height= exptSelected == 0 ?"350px" : "255px";
-		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "455px";
+		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "350px";
+		document.getElementById("imgTitle").style.left= exptSelected == 0 ?"340px" : "100px";
 
 	} else if(imgId == "cb2") {
+		document.getElementById("imgTitle").innerHTML = "Maximum Position";
 		document.getElementById("myImg").src = "./images/maxPosition.png";
-		document.getElementById("myImg").style.height= exptSelected == 0 ?"295px" : "255px";
-		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "455px";
-
+		document.getElementById("myImg").style.height= exptSelected == 0 ?"300px" : "255px";
+		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "355px";
+		document.getElementById("imgTitle").style.left= exptSelected == 0 ?"340px" : "100px";
 	}
 	
 }
@@ -473,6 +476,7 @@ function setExperiments() {
 		document.getElementById("simscreen").style.visibility = "hidden";
 		document.getElementById("variables").style.visibility = "hidden";
 		document.getElementById("myImg").style.visibility = "hidden";
+		document.getElementById("imgTitle").style.visibility = "hidden";
 		document.getElementById("fb").style.visibility = "hidden";
 		document.getElementById("posControls").style.visibility = "hidden";
 		document.getElementById("exp").style.display = "inline-block";
@@ -508,9 +512,11 @@ function startExperiments() {
 			document.getElementById("fb").style.visibility = "visible";
 			document.getElementById("fb").style.left= "200px";
 			document.getElementById("posControls").style.visibility = "visible";
+			document.getElementById("imgTitle").style.visibility = "visible";
+			document.getElementById("imgTitle").style.left = "100px";
 			document.getElementById("myImg").style.visibility = "visible";
 			document.getElementById("myImg").style.height= "255px";
-			document.getElementById("myImg").style.width= "450px";
+			document.getElementById("myImg").style.width= "355px";
 			document.getElementById("myImg").style.visibility = "visible";
 			document.getElementById("myImg").style.left= "100px";
 			document.getElementById("cb1").checked = true;
@@ -614,6 +620,7 @@ function startExperiments() {
 		userRadius = 0;
 		document.getElementById("simscreen").style.visibility = "hidden";
 		document.getElementById("variables").style.visibility = "hidden";
+		document.getElementById("imgTitle").style.visibility = "hidden";
 		document.getElementById("myImg").style.visibility = "hidden";
 		document.getElementById("fb").style.visibility = "hidden";
 		document.getElementById("posControls").style.visibility = "hidden";
@@ -643,6 +650,8 @@ function startExperiments() {
 		document.getElementById("fb").style.visibility = "visible";
 		document.getElementById("fb").style.left= "340px";
 		document.getElementById("posControls").style.visibility = "visible";
+		document.getElementById("imgTitle").style.visibility = "visible";
+		document.getElementById("imgTitle").style.left = "340px";
 		document.getElementById("myImg").style.visibility = "visible";
 		document.getElementById("myImg").style.height= "350px";
 		document.getElementById("myImg").style.width= "350px";
@@ -793,8 +802,9 @@ The simulation requires JavaScript to be enabled.
 <div id="container">
   <div id="simtitle">Hartnell Governor</div>
   <canvas id="simscreen" height="400" width="550"></canvas>
-  <p id="fb"style="position:absolute; left: 340px; top: 90px;font-size: 24px; font-family: Times New Roman;">Free Body Diagram</p>
-  <img src="./images/minPosition.png" id="myImg" style="position:absolute; left: 255px; top: 150px; width:350px"/>
+  <p id="fb"style="position:absolute; left: 340px; top: 90px;font-size: 24px; font-family: Comic Sans MS;">Free Body Diagram</p>
+  <img src="./images/minPosition.png" id="myImg" style="position:absolute; left: 255px; top: 150px; width:350px;width: 350px;"/>
+  <p id="imgTitle" style="position:absolute; left: 340px; top: 140px;font-size: 16px; font-family: Comic Sans MS;">Minimum Position</p>
   <img src="./images/exptImage.png" id="partImage" style="position:absolute; left: 130px; top: 100px;visibility:hidden"/>
   <!-- Experiments Questions Section -->
 	<div id="exp" class="fontClass">
