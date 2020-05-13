@@ -142,7 +142,7 @@ $('#legendicon').css("top",471);
 
 function startsim()
 {
-simTimeId=setInterval("time=time+0.6; varupdate();",'35');
+simTimeId=setInterval("time=time+0.6; varupdate();",8);
 }
 
 function varinit()
@@ -178,7 +178,7 @@ function varupdate()
   n=$('#nspinner').spinner("value");
   m=$('#mspinner').spinner("value");
   omega=(2*3.14*n)/1200;
-  theta=theta+(rotstatus*0.2*deg(omega));
+  theta=theta+(rotstatus*0.05*deg(omega));
   theta=theta%360;
   //if(theta<0)theta+=360;
 //Equation to obtain the required simulation
@@ -456,12 +456,12 @@ function selectPos(elem)
 	var imgId = elem.id;
 	
 	if(imgId == "cb1") {
-		document.getElementById("myImg").src = "images/MINPOS.png";
+		document.getElementById("myImg").src = "./images/minPosition.png";
 		document.getElementById("myImg").style.height= exptSelected == 0 ?"350px" : "255px";
 		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "455px";
 
 	} else if(imgId == "cb2") {
-		document.getElementById("myImg").src = "images/MAXPOS.png";
+		document.getElementById("myImg").src = "./images/maxPosition.png";
 		document.getElementById("myImg").style.height= exptSelected == 0 ?"295px" : "255px";
 		document.getElementById("myImg").style.width= exptSelected == 0 ?"350px" : "455px";
 
@@ -514,7 +514,7 @@ function startExperiments() {
 			document.getElementById("myImg").style.visibility = "visible";
 			document.getElementById("myImg").style.left= "100px";
 			document.getElementById("cb1").checked = true;
-			document.getElementById("myImg").src = "images/MINPOS.png";
+			document.getElementById("myImg").src = "./images/minPosition.png";
 			randomizeValues();
 			varupdate();
 		}
@@ -629,7 +629,7 @@ function startExperiments() {
 		document.getElementById("startExperiment").style.display = "inline-block";
 		document.getElementById("goSimulator").style.display = "inline-block";
 		document.getElementById("cb1").checked = true;
-		document.getElementById("myImg").src = "images/MINPOS.png";
+		document.getElementById("myImg").src = "./images/minPosition.png";
 		$("input:radio[name='expt']").prop('checked', false);
 		resetCalcValues();
 		resetSelect();
@@ -661,7 +661,7 @@ function startExperiments() {
 		document.getElementById('commentboxleft').innerHTML = "Stiffness of spring: "+roundd(S,2)+" N/mm"+"<br>Lift of sleeve: "+roundd(h1,2)+" mm";		
 		$("input:radio[name='expt']").prop('checked', false);
 		document.getElementById("cb1").checked = true;
-		document.getElementById("myImg").src = "images/MINPOS.png";
+		document.getElementById("myImg").src = "./images/minPosition.png";
 		enableVariables();
 		resetCalcValues();
 	}
@@ -794,8 +794,8 @@ The simulation requires JavaScript to be enabled.
   <div id="simtitle">Hartnell Governor</div>
   <canvas id="simscreen" height="400" width="550"></canvas>
   <p id="fb"style="position:absolute; left: 340px; top: 90px;font-size: 24px; font-family: Times New Roman;">Free Body Diagram</p>
-  <img src="images/MINPOS.png" id="myImg" style="position:absolute; left: 255px; top: 150px; width:350px"/>
-  <img src="images/exptImage.png" id="partImage" style="position:absolute; left: 130px; top: 100px;visibility:hidden"/>
+  <img src="./images/minPosition.png" id="myImg" style="position:absolute; left: 255px; top: 150px; width:350px"/>
+  <img src="./images/exptImage.png" id="partImage" style="position:absolute; left: 130px; top: 100px;visibility:hidden"/>
   <!-- Experiments Questions Section -->
 	<div id="exp" class="fontClass">
 	<fieldset>

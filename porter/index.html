@@ -272,7 +272,7 @@ $('#container').css("left",0);
 
 function startsim()
 {
- simTimeId=setInterval("time=time+0.6; varupdate(); ",'100');
+ simTimeId=setInterval("time=time+0.6; varupdate(); ",8);
 }
 
 function varinit()
@@ -314,7 +314,7 @@ function varupdate()
 	n=$('#nspinner').spinner("value");
 	m=$('#massspinner').spinner("value");
 	omega=(2*3.14*n)/600;
-	theta=theta+(rotstatus*0.6*deg(omega));
+	theta=theta+(rotstatus*0.05*deg(omega));
 	theta=theta%360;
 	if(theta<0)theta+=360;
 	h=(m+m1)*9.81/(omega*omega*m);

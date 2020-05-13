@@ -283,7 +283,7 @@ $('#legendicon').css("top",471);
 
 function startsim()
 {
-simTimeId=setInterval("varupdate();",100);
+simTimeId=setInterval("varupdate();",8);
 }
 
 function varinit()
@@ -328,7 +328,7 @@ function varupdate()
 	n=$('#nspinner').spinner("value");
 	m = $('#massspinner').spinner("value");
 	omega=(2*3.14*n)/600;
-	theta=theta+(rotstatus*0.6*deg(omega));//rotation
+	theta=theta+(rotstatus*0.05*deg(omega));//rotation
 	h=((m+m1)*9.81/(omega*omega*m*2));
 	g=(40*40)-(h*h);
 	r1= Math.sqrt(g);
