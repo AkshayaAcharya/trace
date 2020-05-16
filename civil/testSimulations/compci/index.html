@@ -783,7 +783,11 @@ var layout = {
     fixedrange: true
   },
   yaxis: {
+<<<<<<< HEAD
     title:'Load in kN',
+=======
+    title:'Load in KN',
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
     fixedrange: true
   }
 };    
@@ -803,7 +807,11 @@ var options = {
 function ToTable(tbdata)
 {
     html = '<table id="Table" border="1" style="font-size:14px;font-family:verdana">'; 
+<<<<<<< HEAD
 	html += '<tr ><th style="text-align:center;">Load in kN</th>';
+=======
+	html += '<tr ><th style="text-align:center;">Load in KN</th>';
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
 	html += '<th  style="text-align:center">Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){
@@ -823,7 +831,11 @@ function ToTable(tbdata)
 function RefTable(tbdata)
 {
     html = '<table id="Table2" border="border" style="font-size:14px;font-family:verdana">'; 
+<<<<<<< HEAD
 	html += '<tr ><th text-align:center">Load in kN</th>';
+=======
+	html += '<tr ><th text-align:center">Load in KN</th>';
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
 	html += '<th>Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){
@@ -1075,6 +1087,7 @@ $(function()
 		<td id="ta55"></td>
 	</tr>
 	<tr>
+<<<<<<< HEAD
 		<th >Slope1 in kN/div</th>
 		<td id="ta66"></td>
 	</tr>
@@ -1084,6 +1097,17 @@ $(function()
 	</tr>
 	<tr>
 		<th >Slope3 in kN/div</th>
+=======
+		<th >Slope1 in KN/div</th>
+		<td id="ta66"></td>
+	</tr>
+	<tr>
+		<th >Slope2 in KN/div</th>
+		<td id="ta77"></td>
+	</tr>
+	<tr>
+		<th >Slope3 in KN/div</th>
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
 		<td id="ta88"></td>
 	</tr>
 	<tr>

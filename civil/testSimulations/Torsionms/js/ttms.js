@@ -615,7 +615,11 @@ function g1()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}             
@@ -749,7 +753,11 @@ function g2()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}              
@@ -887,7 +895,11 @@ function g3()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}              
@@ -1027,7 +1039,11 @@ function g4()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}
@@ -1167,7 +1183,11 @@ function g5()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}             
@@ -1307,7 +1327,11 @@ function g6()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}              
@@ -1448,7 +1472,11 @@ function g7()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}              
@@ -1591,7 +1619,11 @@ function g8()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}             
@@ -1732,7 +1764,11 @@ function g9()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}             
@@ -1874,7 +1910,11 @@ function g10()
             },   
 			 primaryYAxis:
             {
+<<<<<<< HEAD
 				title: { text: 'Torque in kg.m' },
+=======
+				title: { text: 'Torque in Kg.m' },
+>>>>>>> 09c0e8080c65ea1d9885a619cf6da87d322d7cfd
                 labelFormat:"{value}",
 				// range: { min: 100, max: 400, interval: 50 },                       
                 range: { min: 0, max: 16, interval: 2}              
