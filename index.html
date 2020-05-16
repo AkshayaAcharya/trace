@@ -15,25 +15,22 @@ function setSimualtionScreen(ele) {
 	document.getElementById("simHead").innerHTML = ele.innerHTML;
 	console.log(ele);
 	switch(ele.id) {
-		case "1": document.getElementById("can").src = "./proell/index.html";
+		case "1": document.getElementById("can").src = "./civil/testSimulations/DSRod/index.html";
 						break;
-		case "2": document.getElementById("can").src = "./porter/index.html";
+		case "2": document.getElementById("can").src = "./civil/testSimulations/DSSPlate/index.html";
 						break;
-		case "3": document.getElementById("can").src = "./hartnell/index.html";
+		case "3": document.getElementById("can").src = "./civil/testSimulations/DSSTimber/index.html";
 						break;
-		case "4": document.getElementById("can").src = "./slider/index.html";
+		case "4": document.getElementById("can").src = "./civil/testSimulations/compci/index.html";
 						break;
-		case "5": document.getElementById("can").src = "./fourbar/index.html";
+		case "5": document.getElementById("can").src = "./civil/testSimulations/compms/index.html";
 						break;
-		case "6": document.getElementById("can").src = "./single/index.html";
+		case "6": document.getElementById("can").src = "./civil/testSimulations/Tensionci/index.html";
 						break;
-		case "7": document.getElementById("can").src = "./multiple/index.html";
+		case "7": document.getElementById("can").src = "./civil/testSimulations/Tensionms/index.html";
 						break;
-		case "8": document.getElementById("can").src = "./disc/index.html";
+		case "8": document.getElementById("can").src = "./civil/testSimulations/Torsionms/index.html";
 						break;
-		case "9": document.getElementById("can").src = "./rim/index.html";
-						break;
-
 	}
 }
 </script>
@@ -46,16 +43,14 @@ function setSimualtionScreen(ele) {
 				<div class="panel-heading">Simulations of DOM Lab</div>
 					<div class="panel-body">
 					<div class="btn-toolbar">
-						<button id="1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Proell Governor</button><br><br>
-						<button id="2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Porter Governor</button><br><br>
-						<button id="3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Hartnell Governor</button><br><br>
-						<button id="4" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Dynamic Analysis of Slider Crank Mechanism</button><br><br>
-						<button id="5" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Dynamic Analysis of Four Bar Mechanism </button><br><br>
-						<button id="6" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Balancing of Multiple Mass in Single Plane </button><br><br>
-						<button id="7" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Balancing of Multiple Mass in Multiple Plane </button><br><br>
-						<button id="8" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Disc-Type Flywheel</button><br><br>
-						<button id="9" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Rim-Type Flywheel </button><br><br>
-
+						<button id="1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Direct Shear Test on Mild Steel Rod</button><br><br>
+						<button id="2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Direct Shear Test on Plate</button><br><br>
+						<button id="3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >DIrect Shear Test on Timber</button><br><br>
+						<button id="4" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Compression Test on Cast Iron</button><br><br>
+						<button id="5" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Compression Test on Mild Steel</button><br><br>
+						<button id="6" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Tensile Test on Cast Iron</button><br><br>
+						<button id="7" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Tensile Test on Mild Steel</button><br><br>
+						<button id="8" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Torsion Test on Mild Steel</button><br><br>
 					</div>
 					</div>
 				</div>
