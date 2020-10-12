@@ -331,8 +331,8 @@ $( function()
 			);
 			$('#can36').animate(
 			{
-				left:'203px',
-				top: '180px'
+				left:'201px',
+				top: '177px'
 			},
 			1500,
 			function()
@@ -374,8 +374,8 @@ $( function()
 					);
 			$('#can36').animate(
 						{
-						left:'224px' ,
-						top: '202px'
+							left:'218px' ,
+							top: '195px'
 					},
 					1500,
 			function()
@@ -410,15 +410,15 @@ $( function()
 		{
 			$('#can34').animate(
 						{
-							left:'240px',
-							top: '130px'
+							left:'230px',
+							top: '120px'
 						},
 						1500
 					);
 			$('#can36').animate(
 						{
-						left:'251px',
-						top: '225px'
+							left:'234px' ,
+							top: '212px'
 					},
 					1500,
 					function()
@@ -435,12 +435,55 @@ $( function()
 							myStopFunction();
 							$("#can34").off('click');
 							$('#can34').animate({
-									left:'240px',
-									top: '150px' 
+									left:'230px', 
+									top:'140px' 
 								});
 							setTimeout(function()
 							{
 								document.getElementById('can35c').style.visibility="visible";
+								move4();
+							},500);
+						});
+					});
+		},1000);
+	}
+
+	function move4() {
+		setTimeout(function()
+		{
+			$('#can34').animate(
+						{
+							left:'242px',
+							top: '135px'
+						},
+						1500
+					);
+			$('#can36').animate(
+						{
+						left:'252px',
+						top: '230px'
+					},
+					1500,
+					function()
+					{
+						myInt = setInterval(function(){ animatearrow(); }, 500);
+						document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:365px; top: 140px; height: 30px; z-index: 10;";
+						document.getElementById("arrow1").style.WebkitTransform = "rotate(-90deg)"; 
+						 // Code for IE9
+						document.getElementById("arrow1").style.msTransform = "rotate(-90deg)"; 
+						 // Standard syntax
+						document.getElementById("arrow1").style.transform = "rotate(-90deg)";
+						$('#can34').one('click',function()
+						{
+							myStopFunction();
+							$("#can34").off('click');
+							$('#can34').animate({
+									left:'240px',
+									top: '157px' 
+								});
+							setTimeout(function()
+							{
+								document.getElementById('can35d').style.visibility="visible";
 							},500);
 							setTimeout(function()
 							{
@@ -448,7 +491,7 @@ $( function()
 								document.getElementById('can36').style.visibility="hidden";
 								document.getElementById('v3-0').style.visibility="hidden";
 								document.getElementById('nextButton').style.visibility="visible";
-							},1700);
+							},1500);
 						});
 					});
 		},1000);
@@ -482,7 +525,7 @@ $( function()
 														1500,
 														function()
 														{
-															$('#v9-0').text("Reduction in area is negligible");
+															$('#v9-0').text("Change in diameter is negligible");
 															document.getElementById('nextButton').style.visibility="visible";
 
 														});
@@ -506,110 +549,120 @@ $( function()
 							
 							
 	// });
-	$('#obs1').click(function()
-	{
-		if(ob1==0)
-		{
-			ob1=1;
-			$('#gr1').hide();
-			$('#mydiv3').hide();
-			$('#check').hide();
-			$('#calc').hide();
-			$('#obs1').val("Calculation");
-			document.getElementById('obs').style.visibility="visible";
-			$('#ta33').text(vals0[0]);
-			$('#ta44').text(vals0[1]);
-			$('#ta55').text(vals0[2]);
-			$('#ta66').text(slope[p][0]);
-			$('#ta77').text(slope[p][1]);
-			$('#ta88').text(slope[p][2]);
-			
-		}
-		else if(ob1==1)
-		{
-			ob1=0;
-			$('#obs1').val("Observation");
-			$('#calc').show();
-			$('#obs1').show();
-			$('#gr1').show();
-			$('#check').show();
-			$('#mydiv3').hide();
-			document.getElementById('obs').style.visibility="hidden";
-		}
-		
-	});
-	$('#gr1').click(function()
-	{  
-		if(ob2==0)
-		{
-			ob2=1;
-			$('#gr1').val("Calculation");
-			$('#obs1').hide();
-			$('#check').hide();
-			$('#calc').hide();
-			$('#mydiv3').show();
-			Plotly.newPlot('mydiv3', data, layout,options);
-		}
-		else if(ob2==1)
-		{
-			ob2=0;
-			$('#obs1').val("Observation");
-			$('#gr1').val("Graph");
-			$('#calc').show();
-			$('#obs1').show();
-			$('#mydiv3').hide();
-			$('#check').show();
-			document.getElementById('obs').style.visibility="hidden";
-		}
- });
- $("#check").on('mouseover',function()
-	{
-		if(!$('#i33').val() || !$('#i44').val() || !$('#i55').val() || !$('#i66').val() ||!$('#i77').val())
-		{
-			$('#check').off('click');
-			Tipped.create('#check',"Fill all the values");
-		}
-		else
-		{
-			Tipped.create('#check',"Done!!Click here to view the result.");
-			$("#check").click(function()
-			{
-				en3=$('#i33').val(); 
-				en4=$('#i44').val();
-				en5=$('#i55').val(); 
-				en6=$('#i66').val(); 
-				en7=$('#i77').val(); 
-				pe3=((vals0[3]-en3)*100)/vals0[3];
-				pe4=((vals0[4]-en4)*100)/vals0[4];
-				pe5=((vals0[5]-en5)*100)/vals0[5];
-				pe6=((vals0[6]-en6)*100)/vals0[6];
-				pe7=((vals0[7]-en7)*100)/vals0[7];
-				$('#obs1').hide();
-				$('#gr1').hide();
-				$('#calc').hide();
-				$('#check').hide();
-				document.getElementById('final').style.visibility="visible";
-				$('#l1').text("Initial Diameter(mm): "+vals0[0]+"mm");
-				$('#l2').text("Gauge Length(mm): "+vals0[1]+"mm");
-				$('#t3').text(vals0[3]);
-				$('#t4').text(vals0[4]);
-				$('#t5').text(vals0[5]);
-				$('#t6').text(vals0[6]);
-				$('#t7').text(vals0[7]);
-				$('#e3').text(en3);
-				$('#e4').text(en4);
-				$('#e5').text(en5);
-				$('#e6').text(en6); 
-				$('#e7').text(en7); 
-				$('#p3').text(pe3.toFixed(2));
-				$('#p4').text(pe4.toFixed(2));
-				$('#p5').text(pe5.toFixed(2));
-				$('#p6').text(pe6.toFixed(2));
-				$('#p7').text(pe7.toFixed(2));
-			});
-		}
- });
+	
 }); 
+
+function viewObservation() {
+	if(ob1==0)
+	{
+		ob1=1;
+		$('#gr1').hide();
+		$('#mydiv3').hide();
+		$('#check').hide();
+		$('#calc').hide();
+		$('#obs1').val("Calculation");
+		document.getElementById('obs').style.visibility="visible";
+		$('#ta33').text(vals0[0]);
+		$('#ta44').text(vals0[1]);
+		$('#ta55').text(vals0[2]);
+		$('#ta66').text(slope[p][0]);
+		$('#ta77').text(slope[p][1]);
+		$('#ta88').text(slope[p][2]);
+		
+	}
+	else if(ob1==1)
+	{
+		ob1=0;
+		$('#obs1').val("Observation");
+		$('#calc').show();
+		$('#obs1').show();
+		$('#gr1').show();
+		$('#check').show();
+		$('#mydiv3').hide();
+		document.getElementById('obs').style.visibility="hidden";
+	}
+}
+
+function viewGraph() {
+	if(ob2==0)
+	{
+		ob2=1;
+		$('#gr1').val("Calculation");
+		$('#obs1').hide();
+		$('#check').hide();
+		$('#calc').hide();
+		$('#mydiv3').show();
+		Plotly.newPlot('mydiv3', data, layout,options);
+	}
+	else if(ob2==1)
+	{
+		ob2=0;
+		$('#obs1').val("Observation");
+		$('#gr1').val("Graph");
+		$('#calc').show();
+		$('#obs1').show();
+		$('#mydiv3').hide();
+		$('#check').show();
+		document.getElementById('obs').style.visibility="hidden";
+	}
+}
+
+function viewTooltip() {
+	if(!$('#i33').val() || !$('#i44').val() || !$('#i55').val() || !$('#i66').val() ||!$('#i77').val())
+	{
+		$('#check').off('click');
+		Tipped.create('#check',"Fill all the values");
+	}
+	else
+	{
+		Tipped.create('#check',"Done!!Click here to view the result.");
+	}
+}
+
+
+function checkResult() {
+	if(!$('#i33').val() || !$('#i44').val() || !$('#i55').val() || !$('#i66').val() ||!$('#i77').val())
+	{
+		$('#check').off('click');
+		Tipped.create('#check',"Fill all the values");
+	}
+	else
+	{
+		en3=$('#i33').val(); 
+		en4=$('#i44').val();
+		en5=$('#i55').val(); 
+		en6=$('#i66').val(); 
+		en7=$('#i77').val(); 
+		pe3=((vals0[3]-en3)*100)/vals0[3];
+		pe4=((vals0[4]-en4)*100)/vals0[4];
+		pe5=((vals0[5]-en5)*100)/vals0[5];
+		pe6=((vals0[6]-en6)*100)/vals0[6];
+		pe7=((vals0[7]-en7)*100)/vals0[7];
+		$('#obs1').hide();
+		$('#gr1').hide();
+		$('#calc').hide();
+		$('#check').hide();
+		document.getElementById('final').style.visibility="visible";
+		$('#l1').text("Initial Diameter(mm): "+vals0[0]+"mm");
+		$('#l2').text("Gauge Length(mm): "+vals0[1]+"mm");
+		$('#t3').text(vals0[3]);
+		$('#t4').text(vals0[4]);
+		$('#t5').text(vals0[5]);
+		$('#t6').text(vals0[6]);
+		$('#t7').text(vals0[7]);
+		$('#e3').text(en3);
+		$('#e4').text(en4);
+		$('#e5').text(en5);
+		$('#e6').text(en6); 
+		$('#e7').text(en7); 
+		$('#p3').text(pe3.toFixed(2));
+		$('#p4').text(pe4.toFixed(2));
+		$('#p5').text(pe5.toFixed(2));
+		$('#p6').text(pe6.toFixed(2));
+		$('#p7').text(pe7.toFixed(2));
+	}
+}
+
  //--------------table draw function--------------
  function tabledraw6()
  {
@@ -664,7 +717,7 @@ $( function()
  
 function rodstatus()
 {
-	$('#v10-0').text("Elongation is negligible");
+	$('#v10-0').text("Change in length is negligible");
 	document.getElementById('nextButton').style.visibility="visible";
 }
 
@@ -733,6 +786,7 @@ function magic()
 		document.getElementById('can35a').style.visibility="hidden";
 		document.getElementById('can35b').style.visibility="hidden";
 		document.getElementById('can35c').style.visibility="hidden";
+		document.getElementById('can35d').style.visibility="hidden";
 		document.getElementById('can34').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:260px; top: 500px; height: 30px; z-index: 10;";
