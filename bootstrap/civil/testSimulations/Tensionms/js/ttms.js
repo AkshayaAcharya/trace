@@ -81,6 +81,7 @@ function dzoom()
 					ckd=2;
 					myStopFunction();
 					document.getElementById('can51a').style.visibility="hidden";
+					document.getElementById('v5').style.visibility="visible";
 					document.getElementById('can51b').style.visibility="visible";
 					document.getElementById('can54l').style.visibility="visible";
 					document.getElementById('nextButton').style.visibility="visible";
@@ -232,7 +233,7 @@ function dzoom()
 			1500,
 			function()
 			{ 
-					v1=vals0[0]-0.001;
+					v1=vals0[0];
 					$('#v1-1').html("d<sub>ix</sub> = "+v1.toFixed(2)+'mm');
 					setTimeout(function()
 					{
@@ -275,7 +276,7 @@ function dzoom()
 			1500,
 			function()
 			{ 
-				v2=v1-0.01;
+				v2=v1;
 				$('#v1-2').html("d<sub>iy</sub> = "+v2.toFixed(2)+'mm');
 				$('#v1-0').html("Average Initial diameter d= "+vals0[0]+'mm');
 				document.getElementById('nextButton').style.visibility="visible";
@@ -514,7 +515,7 @@ function dzoom()
 														1500,
 														function()
 														{
-															$('#v9-0').text("Final Diameter = "+vals0[3]+"mm");
+															$('#v9-0').text("Final Diameter = "+vals0[4]+"mm");
 															document.getElementById('nextButton').style.visibility="visible";
 
 														});
@@ -532,7 +533,7 @@ function dzoom()
 							1500,
 							function()
 							{
-								$('#v10-0').text("Final Length between the punch mark  = "+vals0[2]+"mm");
+								$('#v10-0').text("Final Length between the punch mark  = "+vals0[3]+"mm");
 								document.getElementById('nextButton').style.visibility="visible";
 							});						
 	});
@@ -823,6 +824,7 @@ function magic()
 		document.getElementById("can52").style.visibility="hidden";
 		document.getElementById("can53").style.visibility="hidden";
 		document.getElementById("can51b").style.visibility="hidden";
+		document.getElementById("v5").style.visibility="hidden";
 		document.getElementById("can54l").style.visibility="hidden";
 		document.getElementById('can54r').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
