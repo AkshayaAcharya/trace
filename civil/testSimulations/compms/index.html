@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <title>SOLVE</title>
 <link rel="stylesheet" href="./css/ctms.css" />
-<link rel="stylesheet" type="text/css" href="../css/tipped.css" />
-<script type="text/javascript" src= "../js/jquery-2.1.4.js"></script>
-<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src= "../js/plotly-latest.min.js"></script>
-<script type="text/javascript" src= "../js/ej.web.all.min.js"></script>
-<script type="text/javascript" src= "../js/tipped.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/tipped.css" />
+<script type="text/javascript" src= "../../js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="../../js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src= "../../js/plotly-latest.min.js"></script>
+<script type="text/javascript" src= "../../js/ej.web.all.min.js"></script>
+<script type="text/javascript" src= "../../js/tipped.js"></script>
 </head>
 
 
@@ -200,7 +200,7 @@
 		<table border="border" id="last" style="position:absolute;font-family:verdana; font-size:14px;left:100px;top:150px;cellpadding:10px;cellspacing:10px;text-align:center">
 		<tr>
 			<th>Proof  Stress(N/mm<sup>2</sup>)</th>
-			<td id="t33"><input type="text" id="i33" style="font-family:verdana;font-size:14px;text-align: center" autocomplete="off" title="(Proof Load *9.81)/Ao " /></td>
+			<td id="t33"><input type="text" id="i33" style="font-family:verdana;font-size:14px;text-align: center" autocomplete="off" title="(Proof Load)/Ao " /></td>
 		</tr>
 		<tr>
 			<th >Compressive  Strength(N/mm<sup>2</sup>)</th>
@@ -924,7 +924,7 @@ var layout = {
     fixedrange: true
   },
   yaxis: {
-    title:'Load in kN',
+    title:'Load in kg',
     fixedrange: true
   }
 };    
@@ -941,8 +941,8 @@ var options = {
 
 function ToTable(tbdata)
 {
-    html = '<table id="Table" border="1" style="font-size:14px;font-family:verdana;text-align: center">'; 
-	html += '<tr ><th style="text-align:center;">Load in kN</th>';
+    html = '<table id="Table" border="1" style="font-size:14px;font-family:verdana;text-align: center" cellspacing=0>'; 
+	html += '<tr ><th style="text-align:center;">Load in kg</th>';
 	html += '<th  style="text-align:center">Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){
@@ -961,8 +961,8 @@ function ToTable(tbdata)
 }
 function RefTable(tbdata)
 {
-    html = '<table id="Table2" border="border" style="font-size:14px;font-family:verdana;text-align: center">'; 
-	html += '<tr ><th text-align:center">Load in kN</th>';
+    html = '<table id="Table2" border="border" style="font-size:14px;font-family:verdana;text-align: center" cellspacing=0>'; 
+	html += '<tr ><th text-align:center">Load in kg</th>';
 	html += '<th>Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){

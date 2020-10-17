@@ -206,8 +206,8 @@ function rotateImage(degree)
 							1500,
 							function()
 							{ 
-									v1a=vals0[0]-0.001;
-									v1b=vals0[0]-0.01;
+									v1a=vals0[0];
+									v1b=vals0[0];
 									$('#1a').html("d<sub>1x</sub> = "+v1a.toFixed(2));
 									// $('#1b').html("d<sub>1x</sub> = "+v1b.toFixed(2));
 									// $('#1c').html("d<sub>1</sub> = "+v1a.toFixed(2));
@@ -273,7 +273,7 @@ function rotateImage(degree)
 							1500,
 							function()
 							{ 
-								v2a=vals0[0]-0.02;
+								v2a=vals0[0];
 								// v2b=v2a-0.01;
 								mi=(3.14*Math.pow((vals0[0]),4))/64;
 								// $('#2a').html("d<sub>2x</sub> = "+v2a.toFixed(2));
