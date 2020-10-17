@@ -15,26 +15,38 @@ function setSimualtionScreen(ele) {
 	document.getElementById("simHead").innerHTML = ele.innerHTML;
 	console.log(ele);
 	switch(ele.id) {
-		case "1": document.getElementById("can").src = "./civil/testSimulations/compms/index.html";
+		case "1": document.getElementById("can").src = "./civil/testSimulations/BendingMS/index.html";
 						break;
-		case "2": document.getElementById("can").src = "./civil/testSimulations/compci/index.html";
+		case "2": document.getElementById("can").src = "./civil/testSimulations/Brinell/index.html";
 						break;
-		// case "3": document.getElementById("can").src = "./civil/testSimulations/DSSTimber/index.html";
-		// 				break;
-		// case "4": document.getElementById("can").src = "./civil/testSimulations/compci/index.html";
-		// 				break;
-		// case "5": document.getElementById("can").src = "./civil/testSimulations/compms/index.html";
-		// 				break;
-		case "6": document.getElementById("can").src = "./civil/testSimulations/Tensionci/index.html";
+		case "3": document.getElementById("can").src = "./civil/testSimulations/charpy/index.html";
 						break;
-		case "7": document.getElementById("can").src = "./civil/testSimulations/Tensionms/index.html";
+		case "4": document.getElementById("can").src = "./civil/testSimulations/izod/index.html";
 						break;
-		// case "8": document.getElementById("can").src = "./civil/testSimulations/Torsionms/index.html";
-						// break;
-		// case "9": document.getElementById("can").src = "./civil/testSimulations/fp/index.html";
-						// break;
-		// case "10": document.getElementById("can").src = "./civil/testSimulations/venturi/index.html";
-						// break;
+		case "5": document.getElementById("can").src = "./civil/testSimulations/Rockwell/index.html";
+						break;
+		case "6": document.getElementById("can").src = "./civil/testSimulations/Vickers/index.html";
+						break;
+		case "7": document.getElementById("can").src = "./civil/testSimulations/compms/index.html";
+						break;
+		case "8": document.getElementById("can").src = "./civil/testSimulations/compci/index.html";
+						break;
+		case "9": document.getElementById("can").src = "./civil/testSimulations/DSSTimber/index.html";
+						break;
+		case "10": document.getElementById("can").src = "./civil/testSimulations/DSRod/index.html";
+						break;
+		case "11": document.getElementById("can").src = "./civil/testSimulations/DSSPlate/index.html";
+						break;	
+		case "12": document.getElementById("can").src = "./civil/testSimulations/compci/index.html";
+						break;
+		case "13": document.getElementById("can").src = "./civil/testSimulations/compms/index.html";
+						break;
+		case "14": document.getElementById("can").src = "./civil/testSimulations/Tensionci/index.html";
+						break;
+		case "15": document.getElementById("can").src = "./civil/testSimulations/Tensionms/index.html";
+						break;
+		case "16": document.getElementById("can").src = "./civil/testSimulations/Torsionms/index.html";
+						break;
 	}
 }
 </script>
@@ -47,16 +59,23 @@ function setSimualtionScreen(ele) {
 				<div class="panel-heading">Simulations of DOM Lab</div>
 					<div class="panel-body">
 					<div class="btn-toolbar">
-						<button id="1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Compression Test on Mild Steel </button><br><br>
-						<button id="2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Compression Test on Cast Iron</button><br><br>
-						<!-- <button id="3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >DIrect Shear Test on Timber</button><br><br> -->
-						<!-- <button id="4" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Compression Test on Cast Iron</button><br><br> -->
-						<!-- <button id="5" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Compression Test on Mild Steel</button><br><br> -->
-						<button id="6" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Tensile Test on Cast Iron</button><br><br>
-						<button id="7" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Tensile Test on Mild Steel</button><br><br>
-						<!-- <button id="8" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Torsion Test on Mild Steel</button><br><br> -->
-						<!-- <button id="9" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >FRiction In Pipes</button><br><br> -->
-						<!-- <button id="10" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this);" >Ventursi Meter</button><br><br> -->
+						<button id="1" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >BendingMS </button><br><br>
+						<button id="2" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Brinell </button><br><br>
+						<button id="3" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Charpy</button><br><br>
+						<button id="4" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Izod</button><br><br>
+						<button id="5" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Rockwell </button><br><br>
+						<button id="6" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Vickers</button><br><br>
+						<button id="7" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Compression Test on Mild Steel </button><br><br>
+						<button id="8" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Compression Test on Cast Iron </button><br><br>
+						<button id="9" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Direct Shear Test on Timber </button><br><br>
+						<button id="10" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Direct Shear Test on Rod</button><br><br>
+						<button id="11" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Direct Shear Test on Plate </button><br><br>
+						<button id="12" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Compression Test on Cast Iron </button><br><br>
+						<button id="13" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Compression Test on Mild Steel </button><br><br>
+						<button id="14" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Tension Test on Cast Iron </button><br><br>
+						<button id="15" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Tension Test on Mild Steel </button><br><br>
+						<button id="16" class="btn btn-primary btn-sm" onclick="setSimualtionScreen(this); " >Torsion Test</button><br><br>
+						
 					</div>
 					</div>
 				</div>

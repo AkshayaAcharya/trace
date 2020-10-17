@@ -1032,7 +1032,7 @@ var layout = {
     fixedrange: true
   },
   yaxis: {
-    title:'Load in kg',
+    title:'Load in kN',
     fixedrange: true
   }
 };    
@@ -1052,7 +1052,7 @@ var options = {
 function ToTable(tbdata)
 {
     html = '<table id="Table" border="1" style="font-size:14px;font-family:verdana;text-align: center" cellspacing=0>'; 
-	html += '<tr ><th style="text-align:center;">Load in kg</th>';
+	html += '<tr ><th style="text-align:center;">Load in kN</th>';
 	html += '<th  style="text-align:center">Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){
@@ -1072,7 +1072,7 @@ function ToTable(tbdata)
 function RefTable(tbdata)
 {
     html = '<table id="Table2" border="border" style="font-size:14px;font-family:verdana;text-align: center"  cellspacing=0>'; 
-	html += '<tr ><th text-align:center">Load in kg</th>';
+	html += '<tr ><th text-align:center">Load in kN</th>';
 	html += '<th>Dial Gauge Reading in div</th></tr>';
     var len = tbdata.length;
     for(var i = 0; i < len; i++){
