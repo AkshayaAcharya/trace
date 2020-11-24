@@ -154,7 +154,7 @@
 								}
 							}
 						);
-				} else if (settings.on === 'click') {
+				} else if (settings.on === 'click' || settings.on === 'touch') {
 					$source.on('click.zoom',
 						function (e) {
 							if (clicked) {
