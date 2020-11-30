@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'/>
-	<title>Zoom Demo</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<style>
-		/* styles unrelated to zoom */
-		* { border:0; margin:0; padding:0; }
-		p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Zoom</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+        <!--<script type="text/javascript" src="jquery.js" ></script>-->
+        <script type="text/javascript" src="./assets/jquery.mousewheel.min.js" ></script>
+        <script type="text/javascript" src="./assets/jquery.iviewer.js" ></script>
+        <script type="text/javascript">
+            var $ = jQuery;
+            $(document).ready(function(){
+                  $("#viewer").iviewer(
+                       {
+                       src: "./img/test_image.jpg", 
+                       update_on_resize: false,
+                       initCallback: function ()
+                       {
+                           var object = this;
+                        //    $("#in").click(function(){ object.zoom_by(1);}); 
+                        //    $("#out").click(function(){ object.zoom_by(-1);}); 
+                        //    $("#fit").click(function(){ object.fit();}); 
+                        //    $("#orig").click(function(){  object.set_zoom(100); }); 
+                        //    $("#update").click(function(){ object.update_container_info();});
+                       },
+                       onMouseMove: function(object, coords) { },
+                       onStartDrag: function(object, coords) { return false; }, //this image will not be dragged
+                       onDrag: function(object, coords) { }
+                  });
 
-		/* these styles are for the demo, but are not required for the plugin */
-		.zoom {
-			display:inline-block;
-			position: relative;
-		}
-		
-		/* magnifying glass icon */
-		.zoom:after {
-			content:'';
-			display:block; 
-			width:33px; 
-			height:33px; 
-			position:absolute; 
-			top:0;
-			right:0;
-			/* background:url(icon.png); */
-		}
 
-		.zoom img {
-			display:inline-block;
-		}
+                  var iviewer = {};
+                  $("#viewer2").iviewer(
+                  {
+                      src: "https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png",
+                      initCallback: function()
+                      {
+                        iviewer = this;
+                      }
+                  });
+                  var toggleFlag = 0;
+                  $("#chimg").click(function()
+                  {
+                    toggleFlag == 0? (iviewer.loadImage("./img/test_image.jpg"), toggleFlag = 1): (iviewer.loadImage("https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png"), toggleFlag = 0);
+                    return false;
+                  });
+                  
+            });
+        </script>
+        <link rel="stylesheet" href="./assets/jquery.iviewer.css" />
+        <style>
+            .viewer
+            {
+                width: 80%;
+                height: 500px;
+                border: 1px solid black;
+                position: relative;
+                top: 100px;
+                margin: auto;
+                overflow-x: scroll !important;
+                /* overflow-y: scroll !important; */
 
-		.zoom img::selection { background-color: transparent; }
+            }
+            
+            .wrapper
+            {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h1>JQuery.iviewer test</h1><br> -->
 
-		#ex2 img:hover { cursor: url(grab.cur), default; }
-		#ex2 img:active { cursor: url(grabbed.cur), default; }
-	</style>
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-	<script src='jquery.zoom.js'></script>
-	<script>
-		$(document).ready(function(){
-			$('#ex2').zoom({ on:'click' });
-			$('#ex3').zoom({ on:'grab' });
-		});
-	</script>
-</head>
-<body>
-	<div class="container-fluid text-center">
-		<h1>Map</h1>
-		<div class="row">
-			<div class="col-md-6">
-				<h5>Click on a location to zoom in and click again to zoom out</h5>
-				<span class='zoom' id='ex2'>
-					<!-- <img src='https://miro.medium.com/max/4064/1*qYUvh-EtES8dtgKiBRiLsA.png'  width = 600 height = 300 alt='Roxy on the Ohoopee'/> -->
-					<img src='https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png'  width = 600 height = 500 alt='Roxy on the Ohoopee'/>
-					<!-- <img src='https://www.researchgate.net/profile/Ashish_Patil35/publication/335493330/figure/fig2/AS:814997164793856@1571321874915/Simulation-scenario-generated-from-SUMO-considering-area-around-NITK-Surathkal_Q640.jpg'  width = 600 height = 300 alt='Roxy on the Ohoopee'/> -->
-					<!-- <img src='https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/140/2018/2/13/NIT-s-(1).jpg'  width = 600 height = 300 alt='Roxy on the Ohoopee'/> -->
-				</span>
-			</div>
-			<div class="col-md-6">
-				<h5>Click on a location and drag to zoom in and release to zoom out</h5>
-				<span class='zoom' id='ex3'>
-					<img src='https://miro.medium.com/max/4064/1*qYUvh-EtES8dtgKiBRiLsA.png'  width = 600 height = 500 alt='Roxy on the Ohoopee'/>
-					<!-- <img src='https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png'  width = 600 height = 500 alt='Roxy on the Ohoopee'/> -->
-					<!-- <img src='https://www.researchgate.net/profile/Ashish_Patil35/publication/335493330/figure/fig2/AS:814997164793856@1571321874915/Simulation-scenario-generated-from-SUMO-considering-area-around-NITK-Surathkal_Q640.jpg'  width = 600 height = 300 alt='Roxy on the Ohoopee'/> -->
-					<!-- <img src='https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/140/2018/2/13/NIT-s-(1).jpg'  width = 600 height = 300 alt='Roxy on the Ohoopee'/> -->
-				</span>
-			</div>
-			<!-- <div class="col-md-12 text-center">
-				<p>Both the features works same in mobile: touch and drag to zoom in and release to zoom out</p>
-			</div> -->
-		</div>
-		<div class="text-center">
-			<h6>Zoomed view is the original quality of the image</h6>
-			<h6>Both the features works same in mobile: touch and drag to zoom in and release to zoom out</h6>
-		</div>
-	</div>
-</body>
+        <!-- wrapper div is needed for opera because it shows scroll bars for reason -->
+        <div class="wrapper">
+            <!-- <span>
+                <a id="in" href="#">+</a>
+                <a id="out" href="#">-</a>
+                <a id="fit" href="#">fit</a>
+                <a id="orig" href="#">orig</a>
+                <a id="update" href="#">update</a>
+            </span> -->
+            <!-- <div id="viewer" class="viewer"></div> -->
+            <br />
+            <div id="viewer2" class="viewer"></div>
+            <br />
+            <p><a href="#" id="chimg">Change Image</a><br>
+<!-- More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
+        </div> -->
+    </body>
 </html>
