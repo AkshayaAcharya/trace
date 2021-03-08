@@ -1,0 +1,12 @@
+<style>
+.header {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+*{
+  text-align: center;
+ 
+}
+</style>

@@ -1,0 +1,261 @@
+#simscreen
+{
+	position: relative;
+	left:0px;
+	top:0px;
+	height: 600px;
+	width:800px;
+	border:solid 1px;
+}
+
+#title{
+	position:relative;
+	left: 0px;
+	top: 0px;
+	height:40px;
+	font-size: 24px;
+	text-align:center;
+	background-color: black;
+	font-family: verdana;
+	color: White;
+	text-transform: uppercase;
+}
+
+#title h3
+{
+	padding-top:2px;
+	margin:0px;
+}
+
+.simsubscreen
+{
+	position:absolute;
+	/*left:50px;*/
+	top:50px;
+	height:420px;
+	width:550px;
+	
+}
+
+.incanvas
+{
+	margin:5px 0 0 5px;
+	padding:0;
+}
+
+
+
+#variables
+{
+	
+	height: 360px;
+	width: 247px;
+	position: absolute;
+	top:40px;
+	left: 552px;
+	border:1px solid;
+
+}
+
+#result
+{
+	
+	height: 128px;
+	width: 550px;
+	position: absolute;
+	top:470px;
+	border: 2px;
+	border-top-style:dashed;
+
+	
+
+}
+
+#restitle
+{
+	width: 200px;
+	height:30px;
+	font-size: 20px;
+	text-align:center;
+	background-color: black;
+	font-family: verdana;
+	color: White;
+	text-transform: uppercase;
+	position: absolute;
+	top:390px;
+
+}
+
+#restitle h5
+{
+	padding-top:2px;
+	margin:0px;
+
+}
+
+
+
+.subtitle
+{   width:245px;
+	height: 30px;
+	font-size: 20px;
+	text-align:center;
+	background-color: black;
+	font-family: verdana;
+	color: White;
+	text-transform: uppercase;
+	position: absolute;
+	top:0px;
+
+
+}
+.subtitle h5
+{
+	padding-top:2px;
+	margin:0px;
+
+}
+
+#control
+{
+	height: 199px;
+	width: 247px;
+	position: absolute;
+	top:400px;
+	left: 552px;
+	border:1px solid;
+
+}
+
+#pendulam
+{
+	height: 150px;
+	position: relative;
+	left:230px;	
+    animation: rotation 2.5s linear infinite;
+
+
+
+}
+
+hr
+{
+	
+	position: relative;
+	left:256px;
+	margin-left: 0px; 
+	top:18px;
+	background:  rgb(0,0,0);
+  width: 100px;
+  height: 1.5px;
+  transform: rotate(90deg);
+  transform-origin: top left;
+
+  /*animation: boxrotate 3s infinite linear;*/
+
+  
+}
+
+@keyframes boxrotate {
+0%,100%{
+  transform: rotate(135deg);
+  transform-origin: top left;
+  transform-style: preserve-3D;
+}
+50%{
+transform: rotate(45deg);
+transform-origin: top left;
+  transform-style: preserve-3D;
+}
+25%,75%
+{
+	transform: rotate(90deg);
+	transform-origin: top left;
+  transform-style: preserve-3D;
+}
+}
+
+.hold
+{
+	position: relative;
+	left: 250px;
+	top:30px;
+	height: 10px;
+  width: 10px;
+  background-color: rgb(0,0,0);
+  border-radius: 50%;
+  display: inline-block;
+ 
+}
+
+#knob
+{
+	position: absolute;
+	left: 242px;
+	top:125px;
+	height: 25px;
+  width: 25px;
+  background-color: rgb(0,0,0);
+  border-radius: 50%;
+  display: inline-block;
+  /*animation: ;
+  transform:*/
+
+}
+
+@keyframes knobmove {/*
+0%,100%{
+  top:60px;
+  left:190px;
+}
+50%{
+top:60px;
+  left:294px;
+}
+25%,75%
+{
+	top:100px;
+  left:242px;
+}
+
+12.5%,87.5%
+{
+  top:80px;
+  left: 216px;
+}
+
+37.5%,62.5%
+{
+ top:80px;
+  left: 268px;
+}*/
+from{
+	top:25px;
+}
+to{
+	top:25px;
+}
+
+0%,100% { 	transform: rotate(135deg) translateX(100px) rotate(135deg); }
+	50%  {  transform: rotate(45deg)  translateX(100px) rotate(45deg); }
+}
+
+
+
+
+.controlbutton
+{
+	position: relative;
+    top:35px;
+    left:15px;
+}
+
+input[type=text]
+{
+	width: 50px;
+
+}
+.form
+{
+	padding: 10px;
+}

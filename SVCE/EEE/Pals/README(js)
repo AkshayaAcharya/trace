@@ -1,0 +1,77 @@
+## getElement() 
+This function gets the element and sets the text if defined and returns the value.
+
+## start()
+This function is responsible for the alignment of radio buttons, check box, input text area and the other texts in the panel. It initializes each time the page is refreshed.
+
+## updateInput()
+This function updates the text box of length, mass and gravitational acceleration.
+
+## setButton2State()
+This function is used to update the text of the start button.
+
+## switchButton2()
+This function switches the text between start,pause and resume each time when the green button is clicked.
+
+## reactionReset()
+This function accepts the input values, calculates and the graph is drawn again;
+
+## reactionEnter()
+This function is used to accept the values when Enter key is pressed.
+
+## reactionRadioButton()
+This function ensures if the radio buttons are clicked.
+
+## updateInput()
+This function ensures that the text in hte text area is updated once the user enters it in the text box.
+
+## newpath()
+This function is responsible for the string of the pendulum.
+
+## circle()
+This function is responsible for the bob of the pendulum.
+
+## pendulum()
+This function ensures the movement of the pendulum and calculations are done.
+
+## clock()
+This method is used to display the stop watch and shows time in seconds.
+
+## arrow()
+This function is responsible for the movement of the vector from the bob of the pendulum.
+
+## alignText()
+This function is used to align text.
+
+## horizontalAxis()
+This function is used to draw the horizontal line for the graph.
+
+## verticalAxis()
+This function is used to draw the vertical axis for the graph.
+
+## sinus()
+this function is responsible for the sine curve.
+
+## diagram()
+This function draws the graph with labels.
+
+## drawMomVal()
+This function is responsible for the movement of the circle on the graph.
+
+## drawElongation()
+This function draws the elongation curve.
+
+## drawVelocity()
+This function draws the velocity curve.
+
+## drawAcceleration()
+This function draws the Acceleration curve.
+
+----------------------------------------------------------------------------------------------------
+
+Authors:
+
+GokulPriya R. L
+Kavyashree. A
+Swetha. P
+Shivadarshini. A

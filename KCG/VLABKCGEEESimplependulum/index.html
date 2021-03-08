@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" >
+</head>
+<body>
+    <h1 class="heading">SIMPLE PENDULUM </h1>
+    <div class="box main-area">
+        <h1 class="heading"></h1>   
+        <div class="output">
+            <div class="pendulums">
+                <div class="base">
+                    <div class="holder"></div>
+                    <div class="thread">
+                        <div class="pendulum"></div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="sinewave">
+                <canvas id="canvas" width="600px" height="150px"></canvas>
+            </div>
+ 
+        </div>
+        
+    </div>
+    <div class="box1 left-aligned">
+        <h1 class="heading">VARIABLES</h1>    
+        <span>Length(cm)<br>
+        <input id="length-input"><br> 
+        <button onclick="changeLength()">Start</button>
+    </div>
+    <div class="box2 left1-aligned">
+        <h1 class="heading">CONTROLS</h1> 
+        <input type="button" value="Start" onclick="changeLength()">            
+        <input type="button" value="Stop" onclick="stop()">     
+    </div>
+    <div class="box3 left2-aligned">
+        <h1 class="heading">RESULTS</h1>  
+        <p><span class="result-title">Time Period (T):</span> <span id="time-display"></span></p>
+        <p><span class="result-title">Natural Frequency (rads/sec):</span> <span id="frequency-rad-display"></span></p>
+        <p><span class="result-title">Natural Frequency (Hz):</span> <span id="frequency-hz-display"></span></p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

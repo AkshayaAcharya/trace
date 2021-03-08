@@ -1,92 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Zoom</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
-        <!--<script type="text/javascript" src="jquery.js" ></script>-->
-        <script type="text/javascript" src="./assets/jquery.mousewheel.min.js" ></script>
-        <script type="text/javascript" src="./assets/jquery.iviewer.js" ></script>
-        <script type="text/javascript">
-            var $ = jQuery;
-            $(document).ready(function(){
-                  $("#viewer").iviewer(
-                       {
-                       src: "./img/test_image.jpg", 
-                       update_on_resize: false,
-                       initCallback: function ()
-                       {
-                           var object = this;
-                        //    $("#in").click(function(){ object.zoom_by(1);}); 
-                        //    $("#out").click(function(){ object.zoom_by(-1);}); 
-                        //    $("#fit").click(function(){ object.fit();}); 
-                        //    $("#orig").click(function(){  object.set_zoom(100); }); 
-                        //    $("#update").click(function(){ object.update_container_info();});
-                       },
-                       onMouseMove: function(object, coords) { },
-                       onStartDrag: function(object, coords) { return false; }, //this image will not be dragged
-                       onDrag: function(object, coords) { }
-                  });
-
-
-                  var iviewer = {};
-                  $("#viewer2").iviewer(
-                  {
-                      src: "https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png",
-                      initCallback: function()
-                      {
-                        iviewer = this;
-                      }
-                  });
-                  var toggleFlag = 0;
-                  $("#chimg").click(function()
-                  {
-                    toggleFlag == 0? (iviewer.loadImage("./img/test_image.jpg"), toggleFlag = 1): (iviewer.loadImage("https://www.researchgate.net/profile/Gopinath_Kalaiarasan2/publication/312317695/figure/fig4/AS:621377962913792@1525159459275/NITK-Kannada-Medium-School.png"), toggleFlag = 0);
-                    return false;
-                  });
-                  
-            });
-        </script>
-        <link rel="stylesheet" href="./assets/jquery.iviewer.css" />
-        <style>
-            .viewer
-            {
-                width: 80%;
-                height: 500px;
-                border: 1px solid black;
-                position: relative;
-                top: 100px;
-                margin: auto;
-                overflow-x: scroll !important;
-                /* overflow-y: scroll !important; */
-
-            }
-            
-            .wrapper
-            {
-                
-            }
-        </style>
-    </head>
-    <body>
-        <!-- <h1>JQuery.iviewer test</h1><br> -->
-
-        <!-- wrapper div is needed for opera because it shows scroll bars for reason -->
-        <div class="wrapper">
-            <!-- <span>
-                <a id="in" href="#">+</a>
-                <a id="out" href="#">-</a>
-                <a id="fit" href="#">fit</a>
-                <a id="orig" href="#">orig</a>
-                <a id="update" href="#">update</a>
-            </span> -->
-            <!-- <div id="viewer" class="viewer"></div> -->
-            <br />
-            <div id="viewer2" class="viewer"></div>
-            <br />
-            <p><a href="#" id="chimg">Change Image</a><br>
-<!-- More script and css style
-: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></p>
-        </div> -->
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITK - Pre-Training Review</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <p class="btn btn-primary" id="title">Pre-Training Exeriment Review</p>
+        <div id="nav">
+              
+        </div>
+        <div class="row" id="college">
+        </div>
+        <div id="simulator" >
+            <p class="btn btn-primary" id="titleSimulator">Simulator<span class="btn btn-info" style="float: right">Move Top</span></p>
+            <iframe id="sim" src=""></iframe>
+        </div>
+        <div name="endDiv"></div>
+    </div>
+   
+    
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
 </html>

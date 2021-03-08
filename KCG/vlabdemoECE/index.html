@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>VLABS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">SIMPLE PENDULUM</div>
+        <div class="output">
+           <div class="pendulums">
+
+                <div class="base">
+                    <div class="holder"></div>
+                    <div class="thread">
+                        <div class="pendulum"></div>
+                </div>
+             
+            </div>
+
+        </div>
+
+        <div class="sinewave">
+            <canvas id="canvas" width="560" height="180"
+            style="border:1px solid #000000;">
+            </canvas>
+        </div>
+
+        </div>
+
+
+
+         <div class="variable">
+            <div class="head">VARIABLES</div>
+             
+            <label for="length">Length: <span id="l">  </span> cm </label><br>
+            <input type="range" min="0" max="50" value="0" onchange="changeLength()" id="length-input"><br>
+
+          </div>
+
+
+
+    <div class="result">
+            <div class="head">RESULTS</div>           
+            <p><span class="result-title">Time Period (T):</span> <span id="time-display"></span></p>
+            <p><span class="result-title">Natural Frequency (rads/sec):</span> <span id="frequency-rad-display"></span></p>
+            <p><span class="result-title">Natural Frequency (Hz):</span> <span id="frequency-hz-display"></span></p>
+    </div>
+
+
+    <div class="controls">
+            <div class="head">CONTROLS</div>
+            <div class="button">
+                <button class="btn" value="Start" onclick="changeLength()" id="cont"><span class="text-green">Start</span></button>
+                <button class="btn" value="Stop" onclick="stop()" id="cont"><span class="text-green">Stop</span></button>
+            </div>
+    </div>
+
+
+</div>
+    <script>
+            var slider=document.getElementById("length-input");
+            var output=document.getElementById("l");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+                        output.innerHTML = this.value;
+    }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

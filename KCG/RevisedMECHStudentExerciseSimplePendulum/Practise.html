@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+    	<title>Simple pendulam</title>
+    	<link rel="stylesheet" href="soft.css"/>
+</head>
+<body style="margin:0; font-family:verdana;">
+  	<div id="simscreen">
+  		<div id="title"><h3>Simple Pendulam </h3></div>
+		<div class="simsubscreen" id="canvas0" >
+			<span class="hold" ></span>
+    			<hr id="line">
+    			<span id="knob" ></span>
+
+<div class="drawwave">
+              <p id="test1">Amplitude</p>
+                <p id="test2">Time</p>
+                <canvas id="wave" width="400px" height="75px"></canvas>
+
+            </div>
+
+			<div id="restitle"><h5>Result</h5></div>
+		</div>
+		<div class="simsubscreen1" id="variables" >
+			<div class="subtitle"><h5>Variables</h5></div><br><br>
+			<div class="form">
+  				<label >Length(mm)</label><br>
+  				<input type="text" id="length" name="length" >
+  				<button id="myBtn" onclick="CalculateTime()">Button</button>
+			</div> 
+  		</div>
+		<div class="simsubscreen1" id="result" >
+			<p id="timeperiod"></p>
+ 			<p id="freqinRads"></p>
+ 			<p id="freqinHz"></p>
+		</div>
+
+  		<div class="simsubscreen1" id="control" >
+			<div class="subtitle"><h5>Controls</h5></div>
+			<button class="controlbutton" onclick="revolvestart()">start</button>
+       			<button class="controlbutton" onclick="revolvestop()">stop</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

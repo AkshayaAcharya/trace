@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div id="dropBox1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p>Raspberry Pi Board</p>
+        </div>
+        <div id="dropBox2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p>Bread Board</p>
+        </div>
+        <div id="dropBox3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p>LED</p>
+        </div>
+        <div id="dropBox4" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p>Resistor</p>
+        </div>
+        <div id="dropBox5" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p>Wire 1</p>
+        </div>
+        <div id="dropBox6" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p>Wire 2</p>
+        </div>
+        <div id="animals" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img
+          id="pi_board"
+          src="https://www.goodfreephotos.com/albums/vector-images/raspberry-pi-3-vector-file.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+        <img
+          id="bread_board"
+          src="https://www.petervis.com/Raspberry_PI/Solderless_Breadboard/Solderless_Breadboard/Solderless_Breadboard.gif"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+        <img
+          id="led"
+          src="https://hackster.imgix.net/uploads/attachments/446767/led_AOuhtzYEQe.png?auto=compress%2Cformat&w=600&h=450&fit=min"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+      
+        <img
+          id="resistor"
+          src="https://5.imimg.com/data5/WK/AW/MY-69680608/electrical-resistors-500x500.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+        <img
+          id="wire1"
+          src="https://www.pngkit.com/png/full/103-1039871_diagonal-lines-png-armas-de-star-wars.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+        <img
+          id="wire2"
+          src="https://www.pngkit.com/png/full/103-1039871_diagonal-lines-png-armas-de-star-wars.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="300"
+        />
+      </div>
+      <script>
+          function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
+}
+      </script>
+</body>
+</html>

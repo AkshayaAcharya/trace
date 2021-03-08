@@ -1,0 +1,140 @@
+#sim1{
+  border:1px solid ;
+  height: 700px;
+  width:800px;
+}
+#sim2
+{
+  background-color:#111;
+  height:30px;
+  margin-top:-20px;
+}
+#re
+{
+  color:#fff;
+  text-align: center;
+}
+#sim3
+{
+  border:2px solid;
+  height:300px;
+  width:200px;
+  margin-left:598px;
+
+}
+.re1
+{
+  background-color:#111;
+  height:30px;
+  margin-top:-20px;
+
+}
+#le
+{
+  color:#fff;
+  text-align: center;
+
+}
+input{
+  width:80px;
+}
+#sim4
+{
+
+    border:2px solid;
+    height:363px;
+    width:200px;
+    margin-left:598px;
+
+
+}
+#cntl
+{
+  background-color:#111;
+  height:30px;
+  margin-top:-20px;
+
+
+}
+#sim5
+{
+  border:5px solid;
+  height:195px;
+  margin-top:-200px;
+  width:590px;
+  border-top:1px solid transparent;
+}
+#de
+{
+  background-color:#111;
+  height:30px;
+
+}
+.drawwave{
+  margin-left:100px;
+  border-left:1px solid green;
+  margin-top:-20px;
+}
+#test1
+{
+  writing-mode: vertical-rl;
+  margin-left:-40px;
+}
+#test2
+{
+   writing-mode: horizontal-tb;
+   margin-top:-50px;
+   text-align: center;
+
+}
+#sw
+{
+  color:#fff;
+  margin-top:-1px;
+}
+.knob{
+    width: 600px;
+    height: 225px;
+}
+.ceil {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 0 0 30px;
+}
+.held {
+
+    width: 10px;
+    height: 10px;
+    background: black;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.line {
+    display: inline-block;
+    width: 1px;
+    height: 70px;
+    background: black;
+    border-radius: 5px;
+    position: relative;
+    transform-origin: 50% 0;
+}
+.circ {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -9px;
+}
+@keyframes tofro {
+    0%, 100% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    }
