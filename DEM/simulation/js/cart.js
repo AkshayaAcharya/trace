@@ -5,6 +5,16 @@ let symType = "str";
 let updateOnce = false;
 let settingsDescription = [
   {
+    id: "clrRamp",
+    heading: "Color Ramp",
+    desc: "A grid and index are common in an atlas and on roadmaps. A grid represents a series of horizontal and vertical lines running across the map whereas index helps the map reader find a particular location by following the numbers and letters in the grid.",
+  },
+  {
+    id: "symbology",
+    heading: "Symbology",
+    desc: "A grid and index are common in an atlas and on roadmaps. A grid represents a series of horizontal and vertical lines running across the map whereas index helps the map reader find a particular location by following the numbers and letters in the grid.",
+  },
+  {
     id: "newGrid",
     heading: "Grids",
     desc: "A grid and index are common in an atlas and on roadmaps. A grid represents a series of horizontal and vertical lines running across the map whereas index helps the map reader find a particular location by following the numbers and letters in the grid.",
@@ -32,6 +42,7 @@ let settingsDescription = [
 ];
 
 let settingsControl = [
+  { id: "clrRamp", clicked: false },
   { id: "symbology", clicked: false },
   { id: "northArrow", clicked: false },
   { id: "mapTitle", clicked: false },
@@ -92,8 +103,11 @@ function displayOptions(ele) {
   if (ele.id == "map") {
     selectMap();
   }
+  if (ele.id == "clrRamp") {
+    selectColorRamp();
+  }
   if (ele.id == "symbology") {
-    displayColorRamp();
+    chooseSymbologyType();
   }
 }
 
@@ -125,13 +139,14 @@ function setMap(ele, update = false) {
     document.getElementById("mapImage").src = "./images/str" + ele.id + ".png";
     updateOnce = true;
     enableOnEventOver("symbology", showPopup);
+    enableOnEventOver("clrRamp", showPopup);
   } else {
     document.getElementById("mapImage").src = "./images/" + ele + ".png";
   }
   updateDescription();
 }
 
-function displayColorRamp() {
+function selectColorRamp() {
   document.getElementById("popUpContent").innerHTML = `
   <div  class="heading">
     <p class="optTitle">Select Color Ramp <span class="close"
@@ -158,7 +173,7 @@ function selectColor(ele) {
   let currentMap =
     symType == "cls" ? symType + map + color + color : symType + map + color;
   document.getElementById("mapImage").src = "./images/" + currentMap + ".png";
-  chooseSymbologyType();
+  controlOK = true;
 }
 
 function chooseSymbologyType() {
