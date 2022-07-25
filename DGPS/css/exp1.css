@@ -135,8 +135,8 @@ html
 }
 #question-div{
 	position: absolute;
-	border:ridge 3px lightgrey;
-	background-color: lightgrey;
+	border:1px solid rgb(233, 233, 233);
+	background: rgb(240, 239, 239);
 	/* background-image: linear-gradient(grey, lightgrey, black); */
 	/* filter: alpha(opacity=55); */
 	color:black;
@@ -225,51 +225,51 @@ html
 
 @-webkit-keyframes rotateTripod
 {
-	from {transform : translate(-35px,-10px) rotate(0deg);}
-	to {transform : translate(-35px,-10px) rotate(90deg);}
+	from {transform :  rotate(0deg);}
+	to {transform : rotate(90deg);}
 }
 
 @keyframes rotateTripod
 {
-	from {transform : translate(-35px,-10px) rotate(0deg);}
-	to {transform : translate(-35px,-10px) rotate(90deg);}
+	from {transform : rotate(0deg);}
+	to {transform : rotate(90deg);}
 }
 
 @-webkit-keyframes moveHand 
 {
 	from {left:500px; top:36px;}
-	to {left:171px; top:-78px;}
+	to {left:210px; top:-68px;}
 }
 
 @keyframes moveHand
 {
 	from {left:500px; top:36px;}
-	to {left:171px; top:-78px;}
+	to {left:210px; top:-68px;}
 }
 
 @-webkit-keyframes moveHandupdn
 {
-	from {top:-78px;}
-	to {top:-80px;}
+	from {top:-68px;}
+	to {top:-70px;}
 }
 
 @keyframes moveHandupdn
 {
-	from {top:-78px;}
-	to {top:-80px;}
+	from {top:-68px;}
+	to {top:-70px;}
 }
 
 
 @-webkit-keyframes moveHand1 
 {
 	0%{left:500px; top:36px;}
-	100%{left:260px; top:75px;}
+	100%{left:315px; top:120px;}
 }
 
 @keyframes moveHand1
 {
 	0%{left:500px; top:36px;}
-	100%{left:260px; top:75px;}
+	100%{left:315px; top:120px;}
 }
 
 @-webkit-keyframes moveHand1-1 
@@ -287,14 +287,14 @@ html
 @-webkit-keyframes moveLeg
 {
 	from {transform : rotate(0deg);}
-	to {transform :translate(45px,-10px) rotate(-15deg);}
+	to {transform :translate(40.5px,-1.5px) rotate(-15deg);}
 	
 }
 
 @keyframes moveLeg
 {
 	from {transform : rotate(0deg);}
-	to {transform :translate(45px,-32.5px) rotate(-15deg);}
+	to {transform :translate(40.5px,-1.5px) rotate(-15deg);}
 }
 
 @-webkit-keyframes moveHand2
@@ -324,49 +324,49 @@ html
 @-webkit-keyframes moveHand3
 {
 	from {left:500px; top:36px;}
-	to {left:199px; top:-33px;}
+	to {left:242px; top:-8px;}
 }
 
 @keyframes moveHand3
 {
 	from {left:500px; top:36px;}
-	to {left:199px; top:-33px;}
+	to {left:242px; top:-8px;}
 }
 
 @-webkit-keyframes moveHand3dnup
 {
-	from {top:-35px;}
-	to {top:-33px;}
+	from {top:-8px;}
+	to {top:-6px;}
 }
 
 @keyframes moveHand3dnup
 {
-	from {top:-35px;}
-	to {top:-33px;}
+	from {top:-8px;}
+	to {top:-6px;}
 }
 
 @-webkit-keyframes moveHand4 
 {
 	0%{left:500px; top:36px;}
-	100%{left:238px; top:80px;}
+	100%{left:340px; top:120px;}
 }
 
 @keyframes moveHand4
 {
 	0%{left:500px; top:36px;}
-	100%{left:238px; top:80px;}
+	100%{left:340px; top:120px;}
 }
 
 @-webkit-keyframes moveHand4updn
 {
-	0%{top:80px}
-	100%{top:75px;}
+	0%{top:120px}
+	100%{top:130px;}
 }
 
 @keyframes moveHand4updn
 {
-	0%{top:80px}
-	100%{top:75px;}
+	0%{top:120px}
+	100%{top:130px;}
 }
 
 @-webkit-keyframes liftTripod1
@@ -587,5 +587,28 @@ html
 	100%{left:134px;}
 }
 
+@-webkit-keyframes takereading
+{
+	0%{top:270px;}
+	100%{top:60px;}
+}
+
+@keyframes takereading
+{
+	0%{top:270px;}
+	100%{top:60px;}
+}
+
+@-webkit-keyframes movecentrerod
+{
+	0%{top:66px;}
+	100%{top:102px;}
+}
+
+@keyframes movecentrerod
+{
+	0%{top:66px;}
+	100%{top:102px;}
+}
 
 
