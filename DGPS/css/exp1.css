@@ -238,25 +238,25 @@ html
 @-webkit-keyframes moveHand 
 {
 	from {left:500px; top:36px;}
-	to {left:210px; top:-68px;}
+	to {left:365px; top:198x;}
 }
 
 @keyframes moveHand
 {
 	from {left:500px; top:36px;}
-	to {left:210px; top:-68px;}
+	to {left:365px; top:198px;}
 }
 
 @-webkit-keyframes moveHandupdn
 {
-	from {top:-68px;}
-	to {top:-70px;}
+	from {top:198px;}
+	to {top:196px;}
 }
 
 @keyframes moveHandupdn
 {
-	from {top:-68px;}
-	to {top:-70px;}
+	from {top:198px;}
+	to {top:196px;}
 }
 
 
@@ -324,25 +324,25 @@ html
 @-webkit-keyframes moveHand3
 {
 	from {left:500px; top:36px;}
-	to {left:242px; top:-8px;}
+	to {left:395px; top:260px;}
 }
 
 @keyframes moveHand3
 {
 	from {left:500px; top:36px;}
-	to {left:242px; top:-8px;}
+	to {left:395px; top:260px;}
 }
 
 @-webkit-keyframes moveHand3dnup
 {
-	from {top:-8px;}
-	to {top:-6px;}
+	from {top:260px;}
+	to {top:262px;}
 }
 
 @keyframes moveHand3dnup
 {
-	from {top:-8px;}
-	to {top:-6px;}
+	from {top:260px;}
+	to {top:262px;}
 }
 
 @-webkit-keyframes moveHand4 
@@ -575,34 +575,34 @@ html
 
 @-webkit-keyframes movefullTripod
 {
-	0%{left:134px;  } 
+	0%{left:136px;  } 
 	50%{left:138px; }
-	100%{left:134px;}
+	100%{left:136px;}
 }
 
 @keyframes movefullTripod
 {
-	0%{left:134px;  } 
+	0%{left:136px;  } 
 	50%{left:138px; }
-	100%{left:134px;}
+	100%{left:136px;}
 }
 
 @-webkit-keyframes takereading
 {
-	0%{top:270px;}
-	100%{top:60px;}
+	0%{top:250px;}
+	100%{top:53px;}
 }
 
 @keyframes takereading
 {
-	0%{top:270px;}
+	0%{top:265px;}
 	100%{top:60px;}
 }
 
 @-webkit-keyframes movecentrerod
 {
-	0%{top:66px;}
-	100%{top:102px;}
+	0%{top:265px;}
+	100%{top:60px;}
 }
 
 @keyframes movecentrerod

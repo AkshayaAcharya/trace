@@ -243,19 +243,19 @@ function magic()
 		 	{   
 		 		document.getElementById("can2-1").style.visibility="hidden";
 				document.getElementById("can2-0").style.visibility="hidden";
-		 		document.getElementById("can2-13").style.visibility="visible";
-		 		document.getElementById("can2-13").style.animation="rotateTripod 1.5s forwards";
+		 		document.getElementById("can2-11").style.visibility="visible";
+		 		document.getElementById("can2-11").style.animation="rotateTripod 1.5s forwards";
 		 		setTimeout(function()
 				{
-		 		    document.getElementById("can2-13").style.visibility="hidden";
+		 		    document.getElementById("can2-11").style.visibility="hidden";
 					document.getElementById("can2-2").style.visibility="visible";
-					document.getElementById("can2-14").style.visibility="visible";
+					document.getElementById("can2-13").style.visibility="visible";
 		 			myInt = setInterval(function(){ animatearrow(); }, 500);
 		 			animateArrowATPosition(430, 256, 360);	
-					document.getElementById("can2-14").onclick=function()
+					document.getElementById("can2-13").onclick=function()
 					{ 
 						myStopFunction();
-						document.getElementById("can2-14").onclick="";
+						document.getElementById("can2-13").onclick="";
 						document.getElementById("can2-3").style.visibility="visible";
 						document.getElementById("can2-3").style.animation="moveHand 1s forwards, moveHandupdn 1s 4 forwards";
 						setTimeout(function()
@@ -265,26 +265,25 @@ function magic()
 							document.getElementById("can2-4").style.animation="moveHand1 1s forwards";
 							setTimeout(function()
 							{
-								document.getElementById("can2-14").style.visibility="hidden";
+								document.getElementById("can2-13").style.visibility="hidden";
 								document.getElementById("can2-3").style.visibility="hidden";
 								document.getElementById("can2-2").style.visibility="hidden";
 								document.getElementById("can2-4").style.visibility="hidden";
 								document.getElementById("can2-5").style.visibility="visible";
 								document.getElementById("can2-6").style.visibility="hidden";
-								document.getElementById("can2-10").style.visibility="visible";
-								document.getElementById("can2-10").style.animation="moveLeg 2s forwards";
+								document.getElementById("can2-9").style.visibility="visible";
+								document.getElementById("can2-9").style.animation="moveLeg 2s forwards";
 								setTimeout(function()
 								{
-									document.getElementById("can2-10").style.visibility="hidden";  
+									document.getElementById("can2-9").style.visibility="hidden";  
 									document.getElementById("can2-6").style.visibility="visible";
-									document.getElementById("can2-12").style.visibility="visible";
-									document.getElementById("can2-12").style.animation="moveHand4updn 1s forwards";
+									document.getElementById("can2-10").style.visibility="visible";
+									document.getElementById("can2-10").style.animation="moveHand4updn 1s forwards";
 									setTimeout(function()
 									{   
 										document.getElementById("can2-5").style.visibility="hidden";
 										document.getElementById("can2-6").style.visibility="hidden";
-										document.getElementById("can2-11").style.visibility="hidden";	
-										document.getElementById("can2-12").style.visibility="hidden";	
+										document.getElementById("can2-10").style.visibility="hidden";	
 										document.getElementById("can2-7").style.visibility="visible";	
 										document.getElementById("can2-3").style.visibility="visible";
 										document.getElementById("can2-3").style.animation="moveHand3 1s forwards, moveHand3dnup 1s 4 forwards";
@@ -294,7 +293,7 @@ function magic()
 											document.getElementById("note1").style.visibility="hidden";
 											document.getElementById("can2-3").style.visibility="hidden";
 											document.getElementById("can2-7").style.visibility="hidden";
-											document.getElementById("can2-9").style.visibility="visible";
+											document.getElementById("can2-8").style.visibility="visible";
 											document.getElementById("nextButton").style.visibility="visible";
 										},4001);
 									},1001);
@@ -308,7 +307,7 @@ function magic()
 	}	
 	else if(simsubscreennum==3)
 	{
-		document.getElementById("can2-9").style.visibility="hidden";
+		document.getElementById("can2-8").style.visibility="hidden";
         document.getElementById("nextButton").style.visibility="hidden";
 		document.getElementById("note1").style.visibility="hidden";
 		document.getElementById("can3-0").style.visibility="visible";
@@ -339,7 +338,7 @@ function magic()
 						myStopFunction();
 						document.getElementById("can3-8").onclick="";
 						document.getElementById("can3-8").style.visibility="hidden";
-						document.getElementById("can3-12").style.visibility="visible";
+						document.getElementById("can3-11").style.visibility="visible";
 						document.getElementById("can3-3").style.visibility="visible";
 						document.getElementById("can3-4").style.visibility="visible";
 						document.getElementById("can3-4").style.animation="moveHand5updn 1s 4 forwards ";
@@ -347,17 +346,16 @@ function magic()
 						{
 							document.getElementById("can3-3").style.visibility="hidden";
 							document.getElementById("can3-4").style.visibility="hidden";
-							document.getElementById("can3-11").style.visibility="visible";
 							document.getElementById("can3-10").style.visibility="visible";
-							document.getElementById("can3-11").style.animation="movecentrerod 3s forwards ";
+							document.getElementById("can3-9").style.visibility="visible";
+							document.getElementById("can3-10").style.animation="movecentrerod 3s forwards ";
 							setTimeout(function()
 							{
-								document.getElementById("can3-11").style.visibility="hidden";
-								document.getElementById("can3-12").style.visibility="hidden";
 								document.getElementById("can3-10").style.visibility="hidden";
+								document.getElementById("can3-11").style.visibility="hidden";
+								document.getElementById("can3-9").style.visibility="hidden";
 								document.getElementById("can3-5").style.visibility="hidden";
 								document.getElementById("can3-1").style.visibility="hidden";
-								document.getElementById("can3-9").style.visibility="hidden";
 								document.getElementById("can3-6").style.visibility="visible";
 								document.getElementById("nextButton").style.visibility="visible";
 							},3000);		
@@ -371,85 +369,86 @@ function magic()
 	{ 
 		document.getElementById("can3-6").style.visibility="hidden";
         document.getElementById("nextButton").style.visibility="hidden";
-		document.getElementById("can4-0").style.visibility="visible";
-		document.getElementById("can4-6").style.visibility="visible";
-		myInt = setInterval(function(){ animatearrow(); }, 500);
-	    animateArrowATPosition(227.5, 165, 180);
-		document.getElementById("can4-6").onclick=function()
-		{
-			myStopFunction();
-			document.getElementById("can4-6").onclick="";
-			document.getElementById("can4-6").style.visibility="hidden";
-			document.getElementById("can4-1").style.visibility="visible";
-			document.getElementById("can4-2").style.visibility="visible";
-			document.getElementById("can4-2").style.animation="moveHand6lr 1s 2 forwards ";
-			setTimeout(function()
-			{
-				document.getElementById("can4-2").style.visibility="hidden";
-				document.getElementById("can4-1").style.visibility="hidden";
-				document.getElementById("can4-6").style.visibility="hidden";
-				document.getElementById("can4-0").style.visibility="hidden";
-				document.getElementById("can4-8").style.visibility="visible";
-				document.getElementById("can4-9").style.visibility="visible";
-				document.getElementById("can4-8").style.animation="movefullTripod 2s forwards ";
-				setTimeout(function(){
-				document.getElementById("can4-7").style.visibility="visible";
-				document.getElementById("can4-3").style.visibility="visible";
-				document.getElementById("can4-4").style.visibility="visible";
-				document.getElementById("can4-3").style.animation="moveTripod4 2.5s forwards ";
-				setTimeout(function()
-				{
-					document.getElementById("can4-8").style.visibility="hidden";
-					document.getElementById("can4-9").style.visibility="hidden";
-					document.getElementById("can4-0").style.visibility="visible";
-					document.getElementById("can4-3").style.visibility="hidden";
-					document.getElementById("can4-4").style.visibility="hidden";
-					document.getElementById("can4-5").style.visibility="hidden";
-					document.getElementById("can4-7").style.visibility="hidden";                         
-					var q1 = Object.create(questions);																			                                                                      //(ans,nextcanvasfn,left,top,length, height) 
-					generateQuestion(q1,"What is the full form of DGPS? ","","Differentiate globe position system","Differential global position system","Differential global positioning system","None of the above",3,nextCanvas,450,150,250,150);
-				},2501);
-			},2001);
-			},2000);
-		}
+		 document.getElementById("can4-0").style.visibility="visible";
+		 document.getElementById("can4-5").style.visibility="visible";
+		 myInt = setInterval(function(){ animatearrow(); }, 500);
+	     animateArrowATPosition(227.5, 165, 180);
+		 document.getElementById("can4-5").onclick=function()
+		 {
+		 	myStopFunction();
+		 	document.getElementById("can4-5").onclick="";
+		 	document.getElementById("can4-5").style.visibility="hidden";
+		 	document.getElementById("can4-1").style.visibility="visible";
+		 	document.getElementById("can4-2").style.visibility="visible";
+		 	document.getElementById("can4-2").style.animation="moveHand6lr 1s 2 forwards ";
+		 	setTimeout(function()
+		 	{
+		 		document.getElementById("can4-2").style.visibility="hidden";
+		 		document.getElementById("can4-1").style.visibility="hidden";
+		 		document.getElementById("can4-5").style.visibility="hidden";
+		 		document.getElementById("can4-0").style.visibility="hidden";
+		 		document.getElementById("can4-8").style.visibility="visible";
+				 document.getElementById("can4-9").style.visibility="visible";
+		 		document.getElementById("can4-7").style.visibility="visible";
+		 		document.getElementById("can4-8").style.animation="movefullTripod 2s 2 forwards ";
+		 		setTimeout(function(){
+		 		document.getElementById("can4-6").style.visibility="visible";
+		 		document.getElementById("can4-3").style.visibility="visible";
+		 		document.getElementById("can4-4").style.visibility="visible";
+		 		document.getElementById("can4-3").style.animation="moveTripod4 2.5s forwards ";
+		 		setTimeout(function()
+		 		{
+		 			document.getElementById("can4-8").style.visibility="hidden";
+					 document.getElementById("can4-9").style.visibility="hidden";
+		 			document.getElementById("can4-7").style.visibility="hidden";
+		 			document.getElementById("can4-0").style.visibility="visible";
+		 			document.getElementById("can4-3").style.visibility="hidden";
+		 			document.getElementById("can4-4").style.visibility="hidden";
+		 			document.getElementById("can4-6").style.visibility="hidden";                         
+		 			var q1 = Object.create(questions);																			                                                                      //(ans,nextcanvasfn,left,top,length, height) 
+		 			generateQuestion(q1,"What is the full form of DGPS? ","","Differentiate globe position system","Differential global position system","Differential global positioning system","None of the above",3,nextCanvas,450,150,250,150);
+		 		},2501);
+		 	},4001);
+		 	},2000);
+		 }
 	}
 	else if(simsubscreennum==5)
 	{
 		document.getElementById("can4-0").style.visibility="hidden";
 		document.getElementById("nextButton").style.visibility="hidden";
-		document.getElementById("can5-5").style.visibility="visible";
-		document.getElementById("can5-6").style.visibility="visible";
+		document.getElementById("can5-3").style.visibility="visible";
+		document.getElementById("can5-4").style.visibility="visible";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		animateArrowATPosition(330.5, 270, 180);
-		document.getElementById("can5-6").onclick=function()
+		document.getElementById("can5-4").onclick=function()
 		{
             myStopFunction();
-			document.getElementById("can5-6").onclick="";
-			document.getElementById("can5-6").style.visibility="hidden";
-			document.getElementById("can5-5").style.visibility="hidden";
+			document.getElementById("can5-4").onclick="";
+			document.getElementById("can5-4").style.visibility="hidden";
+			document.getElementById("can5-3").style.visibility="hidden";
 			document.getElementById("can5-0").style.visibility="visible";
-			document.getElementById("can5-2").style.visibility="visible";
+			document.getElementById("can5-1").style.visibility="visible";
 			myInt = setInterval(function(){ animatearrow(); }, 500);
 		    animateArrowATPosition(610.5, 140, 270);
-			document.getElementById("can5-2").onclick=function()
+			document.getElementById("can5-1").onclick=function()
 			{
 				myStopFunction();
-				document.getElementById("can5-2").style.animation="moveBattery 2.5s forwards ";
+				document.getElementById("can5-1").style.animation="moveBattery 2.5s forwards ";
 			    setTimeout(function()
 			     {
 					document.getElementById("can5-0").style.visibility="hidden";
-			    	document.getElementById("can5-2").style.visibility="hidden";
-					document.getElementById("can5-7").style.visibility="visible";
-					document.getElementById("can5-8").style.visibility="visible";
+			    	document.getElementById("can5-1").style.visibility="hidden";
+					document.getElementById("can5-5").style.visibility="visible";
+					document.getElementById("can5-6").style.visibility="visible";
 	                myInt = setInterval(function(){ animatearrow(); }, 500);
 		    		animateArrowATPosition(355.5, 316, 90);
-					document.getElementById("can5-8").onclick=function()
+					document.getElementById("can5-6").onclick=function()
 					{
 						myStopFunction();
-						document.getElementById("can5-8").onclick="";
-					    document.getElementById("can5-7").style.visibility="hidden";
-						document.getElementById("can5-8").style.visibility="hidden";
-					    document.getElementById("can5-4").style.visibility="visible";
+						document.getElementById("can5-6").onclick="";
+					    document.getElementById("can5-5").style.visibility="hidden";
+						document.getElementById("can5-6").style.visibility="hidden";
+					    document.getElementById("can5-2").style.visibility="visible";
 					    document.getElementById("nextButton").style.visibility="visible";
 					}
 			     },2501);
@@ -458,7 +457,7 @@ function magic()
 	}
 	 else if(simsubscreennum==6)
 	 {
-		document.getElementById("can5-4").style.visibility="hidden";
+		document.getElementById("can5-2").style.visibility="hidden";
 		document.getElementById("nextButton").style.visibility="hidden";
 		document.getElementById("can6-0").style.visibility="visible";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -475,44 +474,43 @@ function magic()
 			{
 			   document.getElementById("can6-1").style.visibility="hidden";
 		       document.getElementById("can6-2").style.visibility="hidden";
-			   document.getElementById("can6-12").style.visibility="visible";  
-			   document.getElementById("can6-13").style.visibility="visible";
+			   document.getElementById("can6-11").style.visibility="visible";  
+			   document.getElementById("can6-12").style.visibility="visible";
 			   myInt = setInterval(function(){ animatearrow(); }, 500);
 		       animateArrowATPosition(127.5, 352, 180);
-			   document.getElementById("can6-12").onclick=function()
+			   document.getElementById("can6-11").onclick=function()
 			   {
 				   myStopFunction();
-			       document.getElementById("can6-12").onclick="";
-				   document.getElementById("can6-6").style.visibility="visible";
-				   document.getElementById("can6-6").style.animation="moveHand8 1s forwards ";
+			       document.getElementById("can6-11").onclick="";
+				   document.getElementById("can6-5").style.visibility="visible";
+				   document.getElementById("can6-5").style.animation="moveHand8 1s forwards ";
 				   setTimeout(function()  
 				   {
-	                   document.getElementById("can6-12").style.visibility="hidden";
-					   document.getElementById("can6-13").style.visibility="hidden";
-	                   document.getElementById("can6-6").style.visibility="hidden";
-	                   document.getElementById("can6-5").style.visibility="visible";
-					   document.getElementById("can6-4").style.visibility="visible";
-					   document.getElementById("can6-5").style.animation="moveBasetotripod 1s forwards ";
+	                   document.getElementById("can6-11").style.visibility="hidden";
+					   document.getElementById("can6-12").style.visibility="hidden";
+	                   document.getElementById("can6-5").style.visibility="hidden";
+	                   document.getElementById("can6-4").style.visibility="visible";
+					   document.getElementById("can6-3").style.visibility="visible";
+					   document.getElementById("can6-4").style.animation="moveBasetotripod 1s forwards ";
 					   setTimeout(function()  
 					   {
-							document.getElementById("can6-5").style.visibility="hidden";
-							document.getElementById("can6-11").style.visibility="visible";
-                        	document.getElementById("can6-7").style.visibility="visible";
+							document.getElementById("can6-4").style.visibility="hidden";
+							document.getElementById("can6-10").style.visibility="visible";
+                        	document.getElementById("can6-6").style.visibility="visible";
+							document.getElementById("can6-7").style.visibility="visible";
 							document.getElementById("can6-8").style.visibility="visible";
-							document.getElementById("can6-9").style.visibility="visible";
-							document.getElementById("can6-8").style.animation="moveHandtofix 2.5s forwards ";
+							document.getElementById("can6-7").style.animation="moveHandtofix 3.5s forwards ";
 							setTimeout(function()
 							{
-								document.getElementById("can6-4").style.visibility="hidden";
-								document.getElementById("can6-11").style.visibility="hidden";
+								document.getElementById("can6-3").style.visibility="hidden";
+								document.getElementById("can6-10").style.visibility="hidden";
+								document.getElementById("can6-6").style.visibility= "hidden";
 								document.getElementById("can6-7").style.visibility= "hidden";
-								document.getElementById("can6-8").style.visibility= "hidden";
-								document.getElementById("can6-9").style.visibility="hidden";
-								document.getElementById("can6-10").style.visibility="visible";
+								document.getElementById("can6-8").style.visibility="hidden";
+								document.getElementById("can6-9").style.visibility="visible";
 								var q2 = Object.create(questions);																			                                                                     
 					            generateQuestion(q2,"Accuracy that can be achieved by conducting DGPS survey is ______ ","","5cm","1-3cm","10-12cm","1-3 m",2,nextCanvas,500,150,250,150);
-								//document.getElementById("nextButton").style.visibility="visible";
-							},2500);
+							},3500);
 						},1000);
 				 },1000);
 			   }
@@ -521,7 +519,7 @@ function magic()
 	 }
 	 else if(simsubscreennum==7)
 	 {
-		document.getElementById("can6-10").style.visibility="hidden";
+		document.getElementById("can6-9").style.visibility="hidden";
 		document.getElementById("nextButton").style.visibility="hidden";
 		document.getElementById("can7-0").style.visibility="visible";
 		document.getElementById("can7-1").style.visibility="visible";
